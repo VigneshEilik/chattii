@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Dict, List
+from typing import Any, Dict, List, Optional
 
 
 class BaseTokenizer(ABC):
@@ -9,7 +9,7 @@ class BaseTokenizer(ABC):
     """
 
     @abstractmethod
-    def train(self, corpus_path: str) -> None:
+    def train(self, corpus_path: str, loader: Optional[Any] = None) -> None:
         """
         Trains the tokenizer on a raw text corpus file using configuration values.
         """

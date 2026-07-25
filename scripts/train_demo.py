@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 
+
 def main() -> None:
     print("--- Chatii Training Engine Live Demonstration ---")
 

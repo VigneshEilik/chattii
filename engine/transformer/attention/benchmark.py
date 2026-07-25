@@ -1,10 +1,7 @@
 import time
-from typing import Any, Dict
-
+from typing import Dict, Any
 import torch
-
 from engine.transformer.attention.multi_head import MultiHeadSelfAttention
-
 
 class AttentionBenchmark:
     """
@@ -17,7 +14,7 @@ class AttentionBenchmark:
         num_heads: int = 8,
         batch_size: int = 4,
         seq_len: int = 1024,
-        iterations: int = 100,
+        iterations: int = 100
     ) -> Dict[str, Any]:
         """
         Runs MultiHeadSelfAttention forward benchmarks.
@@ -42,5 +39,5 @@ class AttentionBenchmark:
             "iterations": iterations,
             "elapsed_seconds": round(elapsed, 4),
             "throughput_tokens_per_sec": round(tokens_per_sec, 2),
-            "latency_ms_per_iter": round((elapsed / iterations) * 1000, 4),
+            "latency_ms_per_iter": round((elapsed / iterations) * 1000, 4)
         }

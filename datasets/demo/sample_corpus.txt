@@ -1,0 +1,10 @@
+Chatii is a production-grade modular transformer framework.
+   <b>HTML  noise</b>  and  extra   whitespace   here.  
+Short
+Transformers revolutionized natural language processing in 2017.
+Large language models like GPT, LLaMA, and Gemma are trained on massive datasets.
+Tokenization converts raw text into integer token IDs for embedding lookups.
+Sequence packing concatenates multiple samples to minimise padding waste.
+Memory-mapped binary shards enable O(1) random access during training.
+Mixed-precision training reduces GPU memory and improves throughput.
+Gradient accumulation simulates larger effective batch sizes on limited hardware.

@@ -1,11 +1,44 @@
-# Dataset Processing and Source Configurations
-name: "tinystories"
-path: "datasets/download/tinystories"
-format: "text"              # options: "text", "csv", "json"
-splits:
-  train: "train.txt"
-  validation: "validation.txt"
-tokenized_path: "datasets/tokenized/tinystories"
-cache_dir: "datasets/cache"
-validation_split_ratio: 0.05
-seed: 42
+dataset:
+  name: tinystories
+  version: v1
+  path: datasets/demo/tiny.txt
+  format: txt
+
+loader:
+  type: txt
+  encoding: utf-8
+  buffer_size: 65536
+
+streaming:
+  enabled: true
+  prefetch_batches: 4
+
+tokenizer:
+  algorithm: bpe
+  vocab_dir: models/tokenizer
+
+packing:
+  enabled: true
+  max_sequence_length: 2048
+  add_eos: true
+
+binary:
+  format: uint16
+  mmap: true
+  shard_size_mb: 100
+
+cache:
+  enabled: true
+  dir: .cache/dataset
+
+cleaning:
+  normalize_unicode: true
+  clean_html: true
+  trim_whitespace: true
+  remove_control_chars: true
+
+validation:
+  min_length: 5
+  max_length: 100000
+  deduplicate: true
+  language: en

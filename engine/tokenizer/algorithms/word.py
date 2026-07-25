@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict, List
+from typing import Any, Dict, List, Optional
 
 from engine.tokenizer.base.tokenizer import BaseTokenizer
 from engine.tokenizer.normalizer.unicode import UnicodeNormalizer
@@ -20,7 +20,7 @@ class WordTokenizer(BaseTokenizer):
         self.normalizer = UnicodeNormalizer(unicode_normalization, lowercase)
         self.pretokenizer = RegexPretokenizer(mode="word")
 
-    def train(self, corpus_path: str) -> None:
+    def train(self, corpus_path: str, loader: Optional[Any] = None) -> None:
         """
         Scans a text corpus for unique word/punctuation segments and
         adds them to the vocabulary.

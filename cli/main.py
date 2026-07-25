@@ -812,6 +812,131 @@ def _setup_model_parsers(subparsers: Any) -> None:
     )
 
 
+def _setup_dataset_parsers(subparsers: Any) -> None:
+    # Command: register-dataset
+    reg_ds = subparsers.add_parser("register-dataset", help="Register a dataset locally")
+    reg_ds.add_argument("--name", required=True, help="Dataset identifier name")
+    reg_ds.add_argument("--path", required=True, help="Path to raw dataset file")
+    reg_ds.add_argument("--format", default="txt", help="Loader format type")
+    reg_ds.add_argument("--language", default="en", help="Language code")
+    reg_ds.add_argument("--version", default="v1", help="Dataset version tag")
+
+    # Command: remove-dataset
+    rem_ds = subparsers.add_parser("remove-dataset", help="Remove a dataset from registry")
+    rem_ds.add_argument("--name", required=True, help="Dataset identifier name")
+
+    # Command: list-datasets
+    subparsers.add_parser("list-datasets", help="List all registered datasets")
+
+    # Command: dataset-info
+    ds_info = subparsers.add_parser("dataset-info", help="Print details about a registered dataset")
+    ds_info.add_argument("--name", required=True, help="Dataset identifier name")
+
+    # Command: prepare-dataset
+    prep_ds = subparsers.add_parser("prepare-dataset", help="Preprocess, clean, and validate a dataset")
+    prep_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
+
+    # Command: inspect-dataset
+    ins_ds = subparsers.add_parser("inspect-dataset", help="Audit and display dataset summary")
+    ins_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
+
+    # Command: validate-dataset
+    val_ds = subparsers.add_parser("validate-dataset", help="Validate dataset schema and contents")
+    val_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
+
+    # Command: benchmark-dataset
+    bench_ds = subparsers.add_parser("benchmark-dataset", help="Measure loading and cleaning throughput")
+    bench_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
+
+    # Command: stream-dataset
+    strm_ds = subparsers.add_parser("stream-dataset", help="Stream dataset samples to stdout")
+    strm_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
+
+    # Command stubs
+    cache_ds = subparsers.add_parser("cache-dataset", help="Cache dataset preprocessing results (stub)")
+    cache_ds.add_argument("--dataset", required=True, help="Dataset name")
+    cache_ds.add_argument("--fingerprint", default=None, help="Cache fingerprint")
+
+    tok_ds = subparsers.add_parser("tokenize-dataset", help="Tokenize a dataset (stub)")
+    tok_ds.add_argument("--dataset", required=True, help="Dataset name")
+
+    pack_ds = subparsers.add_parser("pack-dataset", help="Pack sequences for a dataset (stub)")
+    pack_ds.add_argument("--dataset", required=True, help="Dataset name")
+
+    stat_ds = subparsers.add_parser("dataset-statistics", help="Calculate dataset statistics (stub)")
+    stat_ds.add_argument("--dataset", required=True, help="Dataset name")
+
+
+def _handle_register_dataset(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.register_dataset(args.name, args.path, args.format, args.language, args.version)
+
+
+def _handle_remove_dataset(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.remove_dataset(args.name)
+
+
+def _handle_list_datasets() -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.list_datasets()
+
+
+def _handle_dataset_info(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.dataset_info(args.name)
+
+
+def _handle_prepare_dataset(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.prepare(args.dataset)
+
+
+def _handle_inspect_dataset(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.inspect(args.dataset)
+
+
+def _handle_validate_dataset(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.validate(args.dataset)
+
+
+def _handle_benchmark_dataset(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.benchmark(args.dataset)
+
+
+def _handle_stream_dataset(args: Any) -> None:
+    from engine.dataset.service import DatasetService
+    service = DatasetService()
+    service.stream(args.dataset)
+
+
+def _handle_cache_dataset(args: Any) -> None:
+    print(f"Caching dataset '{args.dataset}' with fingerprint '{args.fingerprint}'")
+
+
+def _handle_tokenize_dataset(args: Any) -> None:
+    print(f"Tokenizing dataset '{args.dataset}'")
+
+
+def _handle_pack_dataset(args: Any) -> None:
+    print(f"Packing sequences for dataset '{args.dataset}'")
+
+
+def _handle_dataset_statistics(args: Any) -> None:
+    print(f"Calculating dataset statistics for '{args.dataset}'")
+
+
 def main() -> None:
     """
     Unified CLI entrypoint for Chatii execution commands.
@@ -845,6 +970,7 @@ def main() -> None:
     _setup_math_parsers(subparsers)
     _setup_model_parsers(subparsers)
     _setup_training_parsers(subparsers)
+    _setup_dataset_parsers(subparsers)
 
     args = parser.parse_args()
 
@@ -883,6 +1009,19 @@ def main() -> None:
             "inspect-checkpoint": lambda: _handle_inspect_checkpoint(args),
             "export-training-config": lambda: _handle_export_training_config(args),
             "estimate-training-time": lambda: _handle_estimate_training_time(args),
+            "prepare-dataset": lambda: _handle_prepare_dataset(args),
+            "inspect-dataset": lambda: _handle_inspect_dataset(args),
+            "validate-dataset": lambda: _handle_validate_dataset(args),
+            "benchmark-dataset": lambda: _handle_benchmark_dataset(args),
+            "cache-dataset": lambda: _handle_cache_dataset(args),
+            "tokenize-dataset": lambda: _handle_tokenize_dataset(args),
+            "pack-dataset": lambda: _handle_pack_dataset(args),
+            "stream-dataset": lambda: _handle_stream_dataset(args),
+            "dataset-statistics": lambda: _handle_dataset_statistics(args),
+            "list-datasets": lambda: _handle_list_datasets(),
+            "register-dataset": lambda: _handle_register_dataset(args),
+            "remove-dataset": lambda: _handle_remove_dataset(args),
+            "dataset-info": lambda: _handle_dataset_info(args),
         }
         if args.command in handlers:
             handlers[args.command]()
@@ -891,11 +1030,7 @@ def main() -> None:
         print(f"Execution Error: {e}")
         sys.exit(1)
 
-    print(
-        f"Chatii CLI Executed: Command '{args.command}' "
-        "is not implemented yet in Milestone 0."
-    )
-
 
 if __name__ == "__main__":
     main()
+
