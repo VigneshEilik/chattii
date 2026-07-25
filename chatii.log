@@ -1,0 +1,6 @@
+{"timestamp": "2026-07-18T18:22:20.672519Z", "level": "INFO", "module": "training", "message": "Initializing Chatii modular training process...", "taskName": null, "epoch": 0, "step": 0}
+{"timestamp": "2026-07-18T18:22:20.672845Z", "level": "INFO", "module": "training", "message": "Model selected: chatii-10m (256 dim, 8 layers)", "taskName": null}
+{"timestamp": "2026-07-18T18:22:20.673054Z", "level": "WARNING", "module": "training", "message": "Training engine is currently not implemented in Milestone 0.", "taskName": null}
+{"timestamp": "2026-07-18T18:23:04.817618Z", "level": "INFO", "module": "training", "message": "Initializing Chatii modular training process...", "taskName": null, "epoch": 0, "step": 0}
+{"timestamp": "2026-07-18T18:23:04.818048Z", "level": "INFO", "module": "training", "message": "Model selected: chatii-10m (256 dim, 8 layers)", "taskName": null}
+{"timestamp": "2026-07-18T18:23:04.849735Z", "level": "WARNING", "module": "training", "message": "Training engine is currently not implemented in Milestone 0.", "taskName": null}

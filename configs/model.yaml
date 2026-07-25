@@ -1,0 +1,14 @@
+activation: gelu
+normalization: rmsnorm
+position_embedding: rope
+dropout: 0.0
+initializer: xavier_uniform
+dtype: float32
+device: cpu
+d_model: 512
+n_heads: 8
+d_ff: 2048
+num_layers: 12
+rope_theta: 10000.0
+max_seq_len: 2048
+vocab_size: 32000

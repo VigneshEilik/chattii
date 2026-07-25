@@ -1,0 +1,2063 @@
+[
+  {
+    "rank": 1,
+    "pair": [
+      "e",
+      "r"
+    ],
+    "merged": "er",
+    "frequency": 97
+  },
+  {
+    "rank": 2,
+    "pair": [
+      "e",
+      "n"
+    ],
+    "merged": "en",
+    "frequency": 81
+  },
+  {
+    "rank": 3,
+    "pair": [
+      "o",
+      "k"
+    ],
+    "merged": "ok",
+    "frequency": 70
+  },
+  {
+    "rank": 4,
+    "pair": [
+      "i",
+      "z"
+    ],
+    "merged": "iz",
+    "frequency": 65
+  },
+  {
+    "rank": 5,
+    "pair": [
+      "ok",
+      "en"
+    ],
+    "merged": "oken",
+    "frequency": 61
+  },
+  {
+    "rank": 6,
+    "pair": [
+      "t",
+      "oken"
+    ],
+    "merged": "token",
+    "frequency": 53
+  },
+  {
+    "rank": 7,
+    "pair": [
+      "o",
+      "r"
+    ],
+    "merged": "or",
+    "frequency": 52
+  },
+  {
+    "rank": 8,
+    "pair": [
+      "iz",
+      "er"
+    ],
+    "merged": "izer",
+    "frequency": 49
+  },
+  {
+    "rank": 9,
+    "pair": [
+      " ",
+      "="
+    ],
+    "merged": " =",
+    "frequency": 40
+  },
+  {
+    "rank": 10,
+    "pair": [
+      "d",
+      "e"
+    ],
+    "merged": "de",
+    "frequency": 37
+  },
+  {
+    "rank": 11,
+    "pair": [
+      "a",
+      "l"
+    ],
+    "merged": "al",
+    "frequency": 36
+  },
+  {
+    "rank": 12,
+    "pair": [
+      "a",
+      "t"
+    ],
+    "merged": "at",
+    "frequency": 33
+  },
+  {
+    "rank": 13,
+    "pair": [
+      "token",
+      "izer"
+    ],
+    "merged": "tokenizer",
+    "frequency": 33
+  },
+  {
+    "rank": 14,
+    "pair": [
+      " ",
+      "\""
+    ],
+    "merged": " \"",
+    "frequency": 30
+  },
+  {
+    "rank": 15,
+    "pair": [
+      "c",
+      "o"
+    ],
+    "merged": "co",
+    "frequency": 29
+  },
+  {
+    "rank": 16,
+    "pair": [
+      "i",
+      "n"
+    ],
+    "merged": "in",
+    "frequency": 28
+  },
+  {
+    "rank": 17,
+    "pair": [
+      "a",
+      "s"
+    ],
+    "merged": "as",
+    "frequency": 27
+  },
+  {
+    "rank": 18,
+    "pair": [
+      "s",
+      "t"
+    ],
+    "merged": "st",
+    "frequency": 27
+  },
+  {
+    "rank": 19,
+    "pair": [
+      "a",
+      "n"
+    ],
+    "merged": "an",
+    "frequency": 24
+  },
+  {
+    "rank": 20,
+    "pair": [
+      "t",
+      "e"
+    ],
+    "merged": "te",
+    "frequency": 23
+  },
+  {
+    "rank": 21,
+    "pair": [
+      "co",
+      "de"
+    ],
+    "merged": "code",
+    "frequency": 22
+  },
+  {
+    "rank": 22,
+    "pair": [
+      "m",
+      "p"
+    ],
+    "merged": "mp",
+    "frequency": 22
+  },
+  {
+    "rank": 23,
+    "pair": [
+      "s",
+      "er"
+    ],
+    "merged": "ser",
+    "frequency": 22
+  },
+  {
+    "rank": 24,
+    "pair": [
+      "\"",
+      "\""
+    ],
+    "merged": "\"\"",
+    "frequency": 21
+  },
+  {
+    "rank": 25,
+    "pair": [
+      "at",
+      "i"
+    ],
+    "merged": "ati",
+    "frequency": 21
+  },
+  {
+    "rank": 26,
+    "pair": [
+      " =",
+      "="
+    ],
+    "merged": " ==",
+    "frequency": 19
+  },
+  {
+    "rank": 27,
+    "pair": [
+      "as",
+      "ser"
+    ],
+    "merged": "asser",
+    "frequency": 19
+  },
+  {
+    "rank": 28,
+    "pair": [
+      "asser",
+      "t"
+    ],
+    "merged": "assert",
+    "frequency": 19
+  },
+  {
+    "rank": 29,
+    "pair": [
+      "a",
+      "b"
+    ],
+    "merged": "ab",
+    "frequency": 18
+  },
+  {
+    "rank": 30,
+    "pair": [
+      "l",
+      "o"
+    ],
+    "merged": "lo",
+    "frequency": 18
+  },
+  {
+    "rank": 31,
+    "pair": [
+      "\"",
+      ","
+    ],
+    "merged": "\",",
+    "frequency": 17
+  },
+  {
+    "rank": 32,
+    "pair": [
+      "a",
+      "r"
+    ],
+    "merged": "ar",
+    "frequency": 17
+  },
+  {
+    "rank": 33,
+    "pair": [
+      "i",
+      "d"
+    ],
+    "merged": "id",
+    "frequency": 17
+  },
+  {
+    "rank": 34,
+    "pair": [
+      "o",
+      "n"
+    ],
+    "merged": "on",
+    "frequency": 17
+  },
+  {
+    "rank": 35,
+    "pair": [
+      "r",
+      "e"
+    ],
+    "merged": "re",
+    "frequency": 17
+  },
+  {
+    "rank": 36,
+    "pair": [
+      "c",
+      "h"
+    ],
+    "merged": "ch",
+    "frequency": 16
+  },
+  {
+    "rank": 37,
+    "pair": [
+      "m",
+      "al"
+    ],
+    "merged": "mal",
+    "frequency": 16
+  },
+  {
+    "rank": 38,
+    "pair": [
+      "or",
+      "mal"
+    ],
+    "merged": "ormal",
+    "frequency": 16
+  },
+  {
+    "rank": 39,
+    "pair": [
+      "\"",
+      ")"
+    ],
+    "merged": "\")",
+    "frequency": 15
+  },
+  {
+    "rank": 40,
+    "pair": [
+      "a",
+      "g"
+    ],
+    "merged": "ag",
+    "frequency": 15
+  },
+  {
+    "rank": 41,
+    "pair": [
+      "ag",
+      "er"
+    ],
+    "merged": "ager",
+    "frequency": 15
+  },
+  {
+    "rank": 42,
+    "pair": [
+      "an",
+      "ager"
+    ],
+    "merged": "anager",
+    "frequency": 15
+  },
+  {
+    "rank": 43,
+    "pair": [
+      "(",
+      "\""
+    ],
+    "merged": "(\"",
+    "frequency": 14
+  },
+  {
+    "rank": 44,
+    "pair": [
+      "T",
+      "e"
+    ],
+    "merged": "Te",
+    "frequency": 14
+  },
+  {
+    "rank": 45,
+    "pair": [
+      "Te",
+      "st"
+    ],
+    "merged": "Test",
+    "frequency": 14
+  },
+  {
+    "rank": 46,
+    "pair": [
+      "in",
+      "g"
+    ],
+    "merged": "ing",
+    "frequency": 14
+  },
+  {
+    "rank": 47,
+    "pair": [
+      "l",
+      "e"
+    ],
+    "merged": "le",
+    "frequency": 14
+  },
+  {
+    "rank": 48,
+    "pair": [
+      "n",
+      "ormal"
+    ],
+    "merged": "normal",
+    "frequency": 14
+  },
+  {
+    "rank": 49,
+    "pair": [
+      "s",
+      "p"
+    ],
+    "merged": "sp",
+    "frequency": 13
+  },
+  {
+    "rank": 50,
+    "pair": [
+      "te",
+      "mp"
+    ],
+    "merged": "temp",
+    "frequency": 13
+  },
+  {
+    "rank": 51,
+    "pair": [
+      "u",
+      "n"
+    ],
+    "merged": "un",
+    "frequency": 13
+  },
+  {
+    "rank": 52,
+    "pair": [
+      "w",
+      "or"
+    ],
+    "merged": "wor",
+    "frequency": 13
+  },
+  {
+    "rank": 53,
+    "pair": [
+      "(",
+      ")"
+    ],
+    "merged": "()",
+    "frequency": 12
+  },
+  {
+    "rank": 54,
+    "pair": [
+      "at",
+      "h"
+    ],
+    "merged": "ath",
+    "frequency": 12
+  },
+  {
+    "rank": 55,
+    "pair": [
+      "ati",
+      "on"
+    ],
+    "merged": "ation",
+    "frequency": 12
+  },
+  {
+    "rank": 56,
+    "pair": [
+      "c",
+      "ab"
+    ],
+    "merged": "cab",
+    "frequency": 12
+  },
+  {
+    "rank": 57,
+    "pair": [
+      "e",
+      "c"
+    ],
+    "merged": "ec",
+    "frequency": 12
+  },
+  {
+    "rank": 58,
+    "pair": [
+      "m",
+      "anager"
+    ],
+    "merged": "manager",
+    "frequency": 12
+  },
+  {
+    "rank": 59,
+    "pair": [
+      "o",
+      "cab"
+    ],
+    "merged": "ocab",
+    "frequency": 12
+  },
+  {
+    "rank": 60,
+    "pair": [
+      " ",
+      "en"
+    ],
+    "merged": " en",
+    "frequency": 11
+  },
+  {
+    "rank": 61,
+    "pair": [
+      "_",
+      "p"
+    ],
+    "merged": "_p",
+    "frequency": 11
+  },
+  {
+    "rank": 62,
+    "pair": [
+      "a",
+      "c"
+    ],
+    "merged": "ac",
+    "frequency": 11
+  },
+  {
+    "rank": 63,
+    "pair": [
+      "n",
+      "e"
+    ],
+    "merged": "ne",
+    "frequency": 11
+  },
+  {
+    "rank": 64,
+    "pair": [
+      "\"\"",
+      "\""
+    ],
+    "merged": "\"\"\"",
+    "frequency": 10
+  },
+  {
+    "rank": 65,
+    "pair": [
+      "_",
+      "id"
+    ],
+    "merged": "_id",
+    "frequency": 10
+  },
+  {
+    "rank": 66,
+    "pair": [
+      "a",
+      "d"
+    ],
+    "merged": "ad",
+    "frequency": 10
+  },
+  {
+    "rank": 67,
+    "pair": [
+      "a",
+      "v"
+    ],
+    "merged": "av",
+    "frequency": 10
+  },
+  {
+    "rank": 68,
+    "pair": [
+      "av",
+      "e"
+    ],
+    "merged": "ave",
+    "frequency": 10
+  },
+  {
+    "rank": 69,
+    "pair": [
+      "e",
+      "l"
+    ],
+    "merged": "el",
+    "frequency": 10
+  },
+  {
+    "rank": 70,
+    "pair": [
+      "el",
+      "lo"
+    ],
+    "merged": "ello",
+    "frequency": 10
+  },
+  {
+    "rank": 71,
+    "pair": [
+      "i",
+      "al"
+    ],
+    "merged": "ial",
+    "frequency": 10
+  },
+  {
+    "rank": 72,
+    "pair": [
+      " ",
+      "Test"
+    ],
+    "merged": " Test",
+    "frequency": 9
+  },
+  {
+    "rank": 73,
+    "pair": [
+      "_",
+      "tokenizer"
+    ],
+    "merged": "_tokenizer",
+    "frequency": 9
+  },
+  {
+    "rank": 74,
+    "pair": [
+      "ati",
+      "i"
+    ],
+    "merged": "atii",
+    "frequency": 9
+  },
+  {
+    "rank": 75,
+    "pair": [
+      "ch",
+      "atii"
+    ],
+    "merged": "chatii",
+    "frequency": 9
+  },
+  {
+    "rank": 76,
+    "pair": [
+      "f",
+      "i"
+    ],
+    "merged": "fi",
+    "frequency": 9
+  },
+  {
+    "rank": 77,
+    "pair": [
+      "fi",
+      "le"
+    ],
+    "merged": "file",
+    "frequency": 9
+  },
+  {
+    "rank": 78,
+    "pair": [
+      "ne",
+      "w"
+    ],
+    "merged": "new",
+    "frequency": 9
+  },
+  {
+    "rank": 79,
+    "pair": [
+      "r",
+      "o"
+    ],
+    "merged": "ro",
+    "frequency": 9
+  },
+  {
+    "rank": 80,
+    "pair": [
+      "s",
+      "ave"
+    ],
+    "merged": "save",
+    "frequency": 9
+  },
+  {
+    "rank": 81,
+    "pair": [
+      "t",
+      "r"
+    ],
+    "merged": "tr",
+    "frequency": 9
+  },
+  {
+    "rank": 82,
+    "pair": [
+      "token",
+      "s"
+    ],
+    "merged": "tokens",
+    "frequency": 9
+  },
+  {
+    "rank": 83,
+    "pair": [
+      "v",
+      "ocab"
+    ],
+    "merged": "vocab",
+    "frequency": 9
+  },
+  {
+    "rank": 84,
+    "pair": [
+      " ",
+      "tokenizer"
+    ],
+    "merged": " tokenizer",
+    "frequency": 8
+  },
+  {
+    "rank": 85,
+    "pair": [
+      " ",
+      "wor"
+    ],
+    "merged": " wor",
+    "frequency": 8
+  },
+  {
+    "rank": 86,
+    "pair": [
+      "T",
+      "oken"
+    ],
+    "merged": "Token",
+    "frequency": 8
+  },
+  {
+    "rank": 87,
+    "pair": [
+      "Token",
+      "izer"
+    ],
+    "merged": "Tokenizer",
+    "frequency": 8
+  },
+  {
+    "rank": 88,
+    "pair": [
+      "_",
+      "d"
+    ],
+    "merged": "_d",
+    "frequency": 8
+  },
+  {
+    "rank": 89,
+    "pair": [
+      "_",
+      "t"
+    ],
+    "merged": "_t",
+    "frequency": 8
+  },
+  {
+    "rank": 90,
+    "pair": [
+      "_d",
+      "i"
+    ],
+    "merged": "_di",
+    "frequency": 8
+  },
+  {
+    "rank": 91,
+    "pair": [
+      "_di",
+      "r"
+    ],
+    "merged": "_dir",
+    "frequency": 8
+  },
+  {
+    "rank": 92,
+    "pair": [
+      "an",
+      "d"
+    ],
+    "merged": "and",
+    "frequency": 8
+  },
+  {
+    "rank": 93,
+    "pair": [
+      "c",
+      "or"
+    ],
+    "merged": "cor",
+    "frequency": 8
+  },
+  {
+    "rank": 94,
+    "pair": [
+      "cor",
+      "p"
+    ],
+    "merged": "corp",
+    "frequency": 8
+  },
+  {
+    "rank": 95,
+    "pair": [
+      "corp",
+      "u"
+    ],
+    "merged": "corpu",
+    "frequency": 8
+  },
+  {
+    "rank": 96,
+    "pair": [
+      "corpu",
+      "s"
+    ],
+    "merged": "corpus",
+    "frequency": 8
+  },
+  {
+    "rank": 97,
+    "pair": [
+      "ec",
+      "ial"
+    ],
+    "merged": "ecial",
+    "frequency": 8
+  },
+  {
+    "rank": 98,
+    "pair": [
+      "g",
+      "e"
+    ],
+    "merged": "ge",
+    "frequency": 8
+  },
+  {
+    "rank": 99,
+    "pair": [
+      "i",
+      "code"
+    ],
+    "merged": "icode",
+    "frequency": 8
+  },
+  {
+    "rank": 100,
+    "pair": [
+      "i",
+      "mp"
+    ],
+    "merged": "imp",
+    "frequency": 8
+  },
+  {
+    "rank": 101,
+    "pair": [
+      "imp",
+      "or"
+    ],
+    "merged": "impor",
+    "frequency": 8
+  },
+  {
+    "rank": 102,
+    "pair": [
+      "impor",
+      "t"
+    ],
+    "merged": "import",
+    "frequency": 8
+  },
+  {
+    "rank": 103,
+    "pair": [
+      "iz",
+      "ation"
+    ],
+    "merged": "ization",
+    "frequency": 8
+  },
+  {
+    "rank": 104,
+    "pair": [
+      "iz",
+      "e"
+    ],
+    "merged": "ize",
+    "frequency": 8
+  },
+  {
+    "rank": 105,
+    "pair": [
+      "sp",
+      "ecial"
+    ],
+    "merged": "special",
+    "frequency": 8
+  },
+  {
+    "rank": 106,
+    "pair": [
+      "st",
+      "r"
+    ],
+    "merged": "str",
+    "frequency": 8
+  },
+  {
+    "rank": 107,
+    "pair": [
+      "temp",
+      "_dir"
+    ],
+    "merged": "temp_dir",
+    "frequency": 8
+  },
+  {
+    "rank": 108,
+    "pair": [
+      " ",
+      "and"
+    ],
+    "merged": " and",
+    "frequency": 7
+  },
+  {
+    "rank": 109,
+    "pair": [
+      "=",
+      "\""
+    ],
+    "merged": "=\"",
+    "frequency": 7
+  },
+  {
+    "rank": 110,
+    "pair": [
+      "H",
+      "ello"
+    ],
+    "merged": "Hello",
+    "frequency": 7
+  },
+  {
+    "rank": 111,
+    "pair": [
+      "ac",
+      "t"
+    ],
+    "merged": "act",
+    "frequency": 7
+  },
+  {
+    "rank": 112,
+    "pair": [
+      "act",
+      "er"
+    ],
+    "merged": "acter",
+    "frequency": 7
+  },
+  {
+    "rank": 113,
+    "pair": [
+      "ar",
+      "acter"
+    ],
+    "merged": "aracter",
+    "frequency": 7
+  },
+  {
+    "rank": 114,
+    "pair": [
+      "i",
+      "t"
+    ],
+    "merged": "it",
+    "frequency": 7
+  },
+  {
+    "rank": 115,
+    "pair": [
+      "l",
+      "d"
+    ],
+    "merged": "ld",
+    "frequency": 7
+  },
+  {
+    "rank": 116,
+    "pair": [
+      "new",
+      "_tokenizer"
+    ],
+    "merged": "new_tokenizer",
+    "frequency": 7
+  },
+  {
+    "rank": 117,
+    "pair": [
+      "u",
+      "t"
+    ],
+    "merged": "ut",
+    "frequency": 7
+  },
+  {
+    "rank": 118,
+    "pair": [
+      " ",
+      "'"
+    ],
+    "merged": " '",
+    "frequency": 6
+  },
+  {
+    "rank": 119,
+    "pair": [
+      " ",
+      "C"
+    ],
+    "merged": " C",
+    "frequency": 6
+  },
+  {
+    "rank": 120,
+    "pair": [
+      " ",
+      "import"
+    ],
+    "merged": " import",
+    "frequency": 6
+  },
+  {
+    "rank": 121,
+    "pair": [
+      " ",
+      "lo"
+    ],
+    "merged": " lo",
+    "frequency": 6
+  },
+  {
+    "rank": 122,
+    "pair": [
+      " ",
+      "manager"
+    ],
+    "merged": " manager",
+    "frequency": 6
+  },
+  {
+    "rank": 123,
+    "pair": [
+      " C",
+      "h"
+    ],
+    "merged": " Ch",
+    "frequency": 6
+  },
+  {
+    "rank": 124,
+    "pair": [
+      "!",
+      "\""
+    ],
+    "merged": "!\"",
+    "frequency": 6
+  },
+  {
+    "rank": 125,
+    "pair": [
+      ")",
+      ")"
+    ],
+    "merged": "))",
+    "frequency": 6
+  },
+  {
+    "rank": 126,
+    "pair": [
+      "_",
+      "file"
+    ],
+    "merged": "_file",
+    "frequency": 6
+  },
+  {
+    "rank": 127,
+    "pair": [
+      "_p",
+      "ath"
+    ],
+    "merged": "_path",
+    "frequency": 6
+  },
+  {
+    "rank": 128,
+    "pair": [
+      "_t",
+      "o"
+    ],
+    "merged": "_to",
+    "frequency": 6
+  },
+  {
+    "rank": 129,
+    "pair": [
+      "co",
+      "d"
+    ],
+    "merged": "cod",
+    "frequency": 6
+  },
+  {
+    "rank": 130,
+    "pair": [
+      "cod",
+      "ing"
+    ],
+    "merged": "coding",
+    "frequency": 6
+  },
+  {
+    "rank": 131,
+    "pair": [
+      "corpus",
+      "_file"
+    ],
+    "merged": "corpus_file",
+    "frequency": 6
+  },
+  {
+    "rank": 132,
+    "pair": [
+      "de",
+      "code"
+    ],
+    "merged": "decode",
+    "frequency": 6
+  },
+  {
+    "rank": 133,
+    "pair": [
+      "en",
+      "code"
+    ],
+    "merged": "encode",
+    "frequency": 6
+  },
+  {
+    "rank": 134,
+    "pair": [
+      "f",
+      "ro"
+    ],
+    "merged": "fro",
+    "frequency": 6
+  },
+  {
+    "rank": 135,
+    "pair": [
+      "fro",
+      "m"
+    ],
+    "merged": "from",
+    "frequency": 6
+  },
+  {
+    "rank": 136,
+    "pair": [
+      "id",
+      "s"
+    ],
+    "merged": "ids",
+    "frequency": 6
+  },
+  {
+    "rank": 137,
+    "pair": [
+      "in",
+      "e"
+    ],
+    "merged": "ine",
+    "frequency": 6
+  },
+  {
+    "rank": 138,
+    "pair": [
+      "normal",
+      "izer"
+    ],
+    "merged": "normalizer",
+    "frequency": 6
+  },
+  {
+    "rank": 139,
+    "pair": [
+      "s",
+      "e"
+    ],
+    "merged": "se",
+    "frequency": 6
+  },
+  {
+    "rank": 140,
+    "pair": [
+      "save",
+      "_path"
+    ],
+    "merged": "save_path",
+    "frequency": 6
+  },
+  {
+    "rank": 141,
+    "pair": [
+      "t",
+      "ok"
+    ],
+    "merged": "tok",
+    "frequency": 6
+  },
+  {
+    "rank": 142,
+    "pair": [
+      "x",
+      "t"
+    ],
+    "merged": "xt",
+    "frequency": 6
+  },
+  {
+    "rank": 143,
+    "pair": [
+      " ",
+      "-"
+    ],
+    "merged": " -",
+    "frequency": 5
+  },
+  {
+    "rank": 144,
+    "pair": [
+      " ",
+      "N"
+    ],
+    "merged": " N",
+    "frequency": 5
+  },
+  {
+    "rank": 145,
+    "pair": [
+      " ",
+      "P"
+    ],
+    "merged": " P",
+    "frequency": 5
+  },
+  {
+    "rank": 146,
+    "pair": [
+      " ",
+      "W"
+    ],
+    "merged": " W",
+    "frequency": 5
+  },
+  {
+    "rank": 147,
+    "pair": [
+      " ",
+      "te"
+    ],
+    "merged": " te",
+    "frequency": 5
+  },
+  {
+    "rank": 148,
+    "pair": [
+      " -",
+      ">"
+    ],
+    "merged": " ->",
+    "frequency": 5
+  },
+  {
+    "rank": 149,
+    "pair": [
+      " N",
+      "on"
+    ],
+    "merged": " Non",
+    "frequency": 5
+  },
+  {
+    "rank": 150,
+    "pair": [
+      " Non",
+      "e"
+    ],
+    "merged": " None",
+    "frequency": 5
+  },
+  {
+    "rank": 151,
+    "pair": [
+      " P",
+      "ath"
+    ],
+    "merged": " Path",
+    "frequency": 5
+  },
+  {
+    "rank": 152,
+    "pair": [
+      " en",
+      "g"
+    ],
+    "merged": " eng",
+    "frequency": 5
+  },
+  {
+    "rank": 153,
+    "pair": [
+      " eng",
+      "ine"
+    ],
+    "merged": " engine",
+    "frequency": 5
+  },
+  {
+    "rank": 154,
+    "pair": [
+      " te",
+      "st"
+    ],
+    "merged": " test",
+    "frequency": 5
+  },
+  {
+    "rank": 155,
+    "pair": [
+      " test",
+      "_"
+    ],
+    "merged": " test_",
+    "frequency": 5
+  },
+  {
+    "rank": 156,
+    "pair": [
+      " wor",
+      "ld"
+    ],
+    "merged": " world",
+    "frequency": 5
+  },
+  {
+    "rank": 157,
+    "pair": [
+      "Test",
+      "s"
+    ],
+    "merged": "Tests",
+    "frequency": 5
+  },
+  {
+    "rank": 158,
+    "pair": [
+      "_",
+      "tokens"
+    ],
+    "merged": "_tokens",
+    "frequency": 5
+  },
+  {
+    "rank": 159,
+    "pair": [
+      "_p",
+      "re"
+    ],
+    "merged": "_pre",
+    "frequency": 5
+  },
+  {
+    "rank": 160,
+    "pair": [
+      "_to",
+      "_id"
+    ],
+    "merged": "_to_id",
+    "frequency": 5
+  },
+  {
+    "rank": 161,
+    "pair": [
+      "ab",
+      "c"
+    ],
+    "merged": "abc",
+    "frequency": 5
+  },
+  {
+    "rank": 162,
+    "pair": [
+      "ad",
+      "d"
+    ],
+    "merged": "add",
+    "frequency": 5
+  },
+  {
+    "rank": 163,
+    "pair": [
+      "ar",
+      "y"
+    ],
+    "merged": "ary",
+    "frequency": 5
+  },
+  {
+    "rank": 164,
+    "pair": [
+      "c",
+      "as"
+    ],
+    "merged": "cas",
+    "frequency": 5
+  },
+  {
+    "rank": 165,
+    "pair": [
+      "de",
+      "f"
+    ],
+    "merged": "def",
+    "frequency": 5
+  },
+  {
+    "rank": 166,
+    "pair": [
+      "ge",
+      "x"
+    ],
+    "merged": "gex",
+    "frequency": 5
+  },
+  {
+    "rank": 167,
+    "pair": [
+      "it",
+      "h"
+    ],
+    "merged": "ith",
+    "frequency": 5
+  },
+  {
+    "rank": 168,
+    "pair": [
+      "l",
+      "ary"
+    ],
+    "merged": "lary",
+    "frequency": 5
+  },
+  {
+    "rank": 169,
+    "pair": [
+      "normal",
+      "ization"
+    ],
+    "merged": "normalization",
+    "frequency": 5
+  },
+  {
+    "rank": 170,
+    "pair": [
+      "p",
+      "re"
+    ],
+    "merged": "pre",
+    "frequency": 5
+  },
+  {
+    "rank": 171,
+    "pair": [
+      "special",
+      "_tokens"
+    ],
+    "merged": "special_tokens",
+    "frequency": 5
+  },
+  {
+    "rank": 172,
+    "pair": [
+      "token",
+      "_to_id"
+    ],
+    "merged": "token_to_id",
+    "frequency": 5
+  },
+  {
+    "rank": 173,
+    "pair": [
+      "u",
+      "lary"
+    ],
+    "merged": "ulary",
+    "frequency": 5
+  },
+  {
+    "rank": 174,
+    "pair": [
+      "un",
+      "icode"
+    ],
+    "merged": "unicode",
+    "frequency": 5
+  },
+  {
+    "rank": 175,
+    "pair": [
+      "wor",
+      "d"
+    ],
+    "merged": "word",
+    "frequency": 5
+  },
+  {
+    "rank": 176,
+    "pair": [
+      " ",
+      "/"
+    ],
+    "merged": " /",
+    "frequency": 4
+  },
+  {
+    "rank": 177,
+    "pair": [
+      " ",
+      "add"
+    ],
+    "merged": " add",
+    "frequency": 4
+  },
+  {
+    "rank": 178,
+    "pair": [
+      " ",
+      "chatii"
+    ],
+    "merged": " chatii",
+    "frequency": 4
+  },
+  {
+    "rank": 179,
+    "pair": [
+      " ",
+      "d"
+    ],
+    "merged": " d",
+    "frequency": 4
+  },
+  {
+    "rank": 180,
+    "pair": [
+      " ",
+      "f"
+    ],
+    "merged": " f",
+    "frequency": 4
+  },
+  {
+    "rank": 181,
+    "pair": [
+      " ",
+      "s"
+    ],
+    "merged": " s",
+    "frequency": 4
+  },
+  {
+    "rank": 182,
+    "pair": [
+      " \"",
+      "<"
+    ],
+    "merged": " \"<",
+    "frequency": 4
+  },
+  {
+    "rank": 183,
+    "pair": [
+      " Ch",
+      "aracter"
+    ],
+    "merged": " Character",
+    "frequency": 4
+  },
+  {
+    "rank": 184,
+    "pair": [
+      " Character",
+      "Tokenizer"
+    ],
+    "merged": " CharacterTokenizer",
+    "frequency": 4
+  },
+  {
+    "rank": 185,
+    "pair": [
+      " W",
+      "or"
+    ],
+    "merged": " Wor",
+    "frequency": 4
+  },
+  {
+    "rank": 186,
+    "pair": [
+      " Wor",
+      "d"
+    ],
+    "merged": " Word",
+    "frequency": 4
+  },
+  {
+    "rank": 187,
+    "pair": [
+      " Word",
+      "Tokenizer"
+    ],
+    "merged": " WordTokenizer",
+    "frequency": 4
+  },
+  {
+    "rank": 188,
+    "pair": [
+      " en",
+      "coding"
+    ],
+    "merged": " encoding",
+    "frequency": 4
+  },
+  {
+    "rank": 189,
+    "pair": [
+      "F",
+      "al"
+    ],
+    "merged": "Fal",
+    "frequency": 4
+  },
+  {
+    "rank": 190,
+    "pair": [
+      "Fal",
+      "se"
+    ],
+    "merged": "False",
+    "frequency": 4
+  },
+  {
+    "rank": 191,
+    "pair": [
+      "[",
+      "\""
+    ],
+    "merged": "[\"",
+    "frequency": 4
+  },
+  {
+    "rank": 192,
+    "pair": [
+      "_",
+      "special_tokens"
+    ],
+    "merged": "_special_tokens",
+    "frequency": 4
+  },
+  {
+    "rank": 193,
+    "pair": [
+      "_pre",
+      "tok"
+    ],
+    "merged": "_pretok",
+    "frequency": 4
+  },
+  {
+    "rank": 194,
+    "pair": [
+      "a",
+      "in"
+    ],
+    "merged": "ain",
+    "frequency": 4
+  },
+  {
+    "rank": 195,
+    "pair": [
+      "cas",
+      "e"
+    ],
+    "merged": "case",
+    "frequency": 4
+  },
+  {
+    "rank": 196,
+    "pair": [
+      "ch",
+      "ar"
+    ],
+    "merged": "char",
+    "frequency": 4
+  },
+  {
+    "rank": 197,
+    "pair": [
+      "i",
+      "p"
+    ],
+    "merged": "ip",
+    "frequency": 4
+  },
+  {
+    "rank": 198,
+    "pair": [
+      "tr",
+      "ain"
+    ],
+    "merged": "train",
+    "frequency": 4
+  },
+  {
+    "rank": 199,
+    "pair": [
+      "un",
+      "k"
+    ],
+    "merged": "unk",
+    "frequency": 4
+  },
+  {
+    "rank": 200,
+    "pair": [
+      "unicode",
+      "_"
+    ],
+    "merged": "unicode_",
+    "frequency": 4
+  },
+  {
+    "rank": 201,
+    "pair": [
+      "vocab",
+      "_"
+    ],
+    "merged": "vocab_",
+    "frequency": 4
+  },
+  {
+    "rank": 202,
+    "pair": [
+      " ",
+      "+"
+    ],
+    "merged": " +",
+    "frequency": 3
+  },
+  {
+    "rank": 203,
+    "pair": [
+      " ",
+      "1"
+    ],
+    "merged": " 1",
+    "frequency": 3
+  },
+  {
+    "rank": 204,
+    "pair": [
+      " ",
+      "4"
+    ],
+    "merged": " 4",
+    "frequency": 3
+  },
+  {
+    "rank": 205,
+    "pair": [
+      " ",
+      "R"
+    ],
+    "merged": " R",
+    "frequency": 3
+  },
+  {
+    "rank": 206,
+    "pair": [
+      " ",
+      "U"
+    ],
+    "merged": " U",
+    "frequency": 3
+  },
+  {
+    "rank": 207,
+    "pair": [
+      " ",
+      "V"
+    ],
+    "merged": " V",
+    "frequency": 3
+  },
+  {
+    "rank": 208,
+    "pair": [
+      " ",
+      "new_tokenizer"
+    ],
+    "merged": " new_tokenizer",
+    "frequency": 3
+  },
+  {
+    "rank": 209,
+    "pair": [
+      " ",
+      "normalizer"
+    ],
+    "merged": " normalizer",
+    "frequency": 3
+  },
+  {
+    "rank": 210,
+    "pair": [
+      " ",
+      "o"
+    ],
+    "merged": " o",
+    "frequency": 3
+  },
+  {
+    "rank": 211,
+    "pair": [
+      " ",
+      "ro"
+    ],
+    "merged": " ro",
+    "frequency": 3
+  },
+  {
+    "rank": 212,
+    "pair": [
+      " ",
+      "sp"
+    ],
+    "merged": " sp",
+    "frequency": 3
+  },
+  {
+    "rank": 213,
+    "pair": [
+      " ",
+      "special"
+    ],
+    "merged": " special",
+    "frequency": 3
+  },
+  {
+    "rank": 214,
+    "pair": [
+      " ",
+      "temp"
+    ],
+    "merged": " temp",
+    "frequency": 3
+  },
+  {
+    "rank": 215,
+    "pair": [
+      " ",
+      "tokens"
+    ],
+    "merged": " tokens",
+    "frequency": 3
+  },
+  {
+    "rank": 216,
+    "pair": [
+      " ",
+      "vocab"
+    ],
+    "merged": " vocab",
+    "frequency": 3
+  },
+  {
+    "rank": 217,
+    "pair": [
+      " ",
+      "w"
+    ],
+    "merged": " w",
+    "frequency": 3
+  },
+  {
+    "rank": 218,
+    "pair": [
+      " 1",
+      "0"
+    ],
+    "merged": " 10",
+    "frequency": 3
+  },
+  {
+    "rank": 219,
+    "pair": [
+      " R",
+      "e"
+    ],
+    "merged": " Re",
+    "frequency": 3
+  },
+  {
+    "rank": 220,
+    "pair": [
+      " Re",
+      "gex"
+    ],
+    "merged": " Regex",
+    "frequency": 3
+  },
+  {
+    "rank": 221,
+    "pair": [
+      " Regex",
+      "P"
+    ],
+    "merged": " RegexP",
+    "frequency": 3
+  },
+  {
+    "rank": 222,
+    "pair": [
+      " RegexP",
+      "re"
+    ],
+    "merged": " RegexPre",
+    "frequency": 3
+  },
+  {
+    "rank": 223,
+    "pair": [
+      " RegexPre",
+      "tokenizer"
+    ],
+    "merged": " RegexPretokenizer",
+    "frequency": 3
+  },
+  {
+    "rank": 224,
+    "pair": [
+      " U",
+      "n"
+    ],
+    "merged": " Un",
+    "frequency": 3
+  },
+  {
+    "rank": 225,
+    "pair": [
+      " Un",
+      "icode"
+    ],
+    "merged": " Unicode",
+    "frequency": 3
+  },
+  {
+    "rank": 226,
+    "pair": [
+      " V",
+      "ocab"
+    ],
+    "merged": " Vocab",
+    "frequency": 3
+  },
+  {
+    "rank": 227,
+    "pair": [
+      " Vocab",
+      "ulary"
+    ],
+    "merged": " Vocabulary",
+    "frequency": 3
+  },
+  {
+    "rank": 228,
+    "pair": [
+      " Vocabulary",
+      "M"
+    ],
+    "merged": " VocabularyM",
+    "frequency": 3
+  },
+  {
+    "rank": 229,
+    "pair": [
+      " VocabularyM",
+      "anager"
+    ],
+    "merged": " VocabularyManager",
+    "frequency": 3
+  }
+]

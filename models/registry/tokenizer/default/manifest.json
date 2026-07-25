@@ -1,0 +1,9 @@
+{
+  "name": "default_bpe",
+  "algorithm": "bpe",
+  "vocab_size": 71,
+  "version": "1.0.0",
+  "status": "active",
+  "created_at": "2026-07-18T19:29:48.085852Z",
+  "location": "models/registry/tokenizer/default"
+}

@@ -1,0 +1,207 @@
+#version: 1.0.0
+  t
+  s
+  a
+h e
+P i
+Pi p
+  Pip
+  b
+  f
+  w
+ t he
+a r
+n d
+ a nd
+ t o
+a y
+r e
+  h
+ s a
+ s t
+ st ar
+i g
+  d
+ t h
+ w a
+e d
+i n
+l e
+l y
+o m
+u t
+  l
+  n
+  o
+  u
+ b e
+ d ay
+ h ig
+ th a
+ tha t
+ u p
+ wa s
+T he
+le w
+r om
+v e
+  The
+  m
+ b ut
+ be a
+ bea ut
+ beaut i
+ beauti f
+ beautif u
+ beautifu l
+ f ar
+ f e
+ f lew
+ h a
+ ha p
+ hap p
+ hig he
+ highe r
+ l o
+ s u
+ sa w
+ su n
+ t i
+ t re
+ tre e
+ w ar
+ war m
+F rom
+O n
+a l
+a m
+d e
+i d
+in g
+n g
+o k
+r y
+ve ry
+  c
+  e
+  g
+  he
+  i
+  in
+  re
+  very
+ a l
+ a re
+ a w
+ al l
+ aw ay
+ b i
+ b ig
+ b lew
+ b r
+ be c
+ bec am
+ becam e
+ bi r
+ bir d
+ br ig
+ brig h
+ brigh t
+ c l
+ cl o
+ clo s
+ clos e
+ d id
+ e very
+ f ly
+ f r
+ f rom
+ fe e
+ fe l
+ fee l
+ fel t
+ fr i
+ fri e
+ frie nd
+ friend ly
+ g i
+ gi ve
+ happ i
+ happ y
+ happi ly
+ hig h
+ i s
+ l i
+ li t
+ lit t
+ litt le
+ lo ok
+ lo v
+ look ed
+ lov ed
+ m a
+ m o
+ ma de
+ mo r
+ mor n
+ morn ing
+ n am
+ n e
+ n o
+ nam ed
+ ne x
+ nex t
+ no t
+ o f
+ o k
+ o n
+ ok ay
+ re al
+ real i
+ reali z
+ realiz ed
+ s h
+ s k
+ s o
+ s om
+ sa f
+ sa id
+ sa ng
+ saf e
+ sh in
+ shin y
+ sk y
+ so ng
+ som e
+ t al
+ tal l
+ th ing
+ the re
+ thing s
+ ti m
+ ti re
+ tim e
+ tire d
+ to o
+ to p
+ to u
+ tou c
+ touc h
+ up o
+ upo n
+ w ay
+ w i
+ w ok
+ wa n
+ wan t
+ wi nd
+ wok e
+, "
+On c
+On e
+Onc e
+S u
+Su d
+Sud de
+Sudde n
+Sudden ly

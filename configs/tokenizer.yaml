@@ -1,0 +1,14 @@
+algorithm: bpe
+vocab_size: 1000
+unicode_normalization: NFKC
+lowercase: false
+min_frequency: 1
+special_tokens:
+  - "<pad>"
+  - "<unk>"
+  - "<s>"
+  - "</s>"
+  - "<mask>"
+checkpoint_interval: 100
+padding: true
+max_length: 4096

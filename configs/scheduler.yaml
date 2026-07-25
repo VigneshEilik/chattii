@@ -1,0 +1,3 @@
+min_lr: 3.0e-05
+type: cosine
+warmup_steps: 1000

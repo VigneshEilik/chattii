@@ -1,0 +1,38 @@
+name: Build Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  docker-build:
+    name: Validate Docker Builds
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Development Image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: Dockerfile.dev
+        push: false
+        tags: chatii-dev:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Build Production Image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: Dockerfile.prod
+        push: false
+        tags: chatii-prod:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max

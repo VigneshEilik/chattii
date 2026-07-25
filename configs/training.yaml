@@ -1,0 +1,17 @@
+seed: 42
+batch_size: 4
+gradient_accumulation_steps: 1
+max_epochs: 2
+max_steps: 10
+mixed_precision: none
+grad_clip: 1.0
+device: cpu
+save_interval: 5
+checkpoint_dir: models/checkpoints
+keep_top_n: 2
+eval_interval: 5
+early_stopping_patience: 3
+tensorboard: false
+csv: true
+console: true
+dashboard: false

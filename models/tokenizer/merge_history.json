@@ -1,0 +1,1856 @@
+[
+  {
+    "rank": 1,
+    "pair": [
+      " ",
+      "t"
+    ],
+    "merged": " t",
+    "frequency": 24
+  },
+  {
+    "rank": 2,
+    "pair": [
+      " ",
+      "s"
+    ],
+    "merged": " s",
+    "frequency": 16
+  },
+  {
+    "rank": 3,
+    "pair": [
+      " ",
+      "a"
+    ],
+    "merged": " a",
+    "frequency": 15
+  },
+  {
+    "rank": 4,
+    "pair": [
+      "h",
+      "e"
+    ],
+    "merged": "he",
+    "frequency": 15
+  },
+  {
+    "rank": 5,
+    "pair": [
+      "P",
+      "i"
+    ],
+    "merged": "Pi",
+    "frequency": 12
+  },
+  {
+    "rank": 6,
+    "pair": [
+      "Pi",
+      "p"
+    ],
+    "merged": "Pip",
+    "frequency": 12
+  },
+  {
+    "rank": 7,
+    "pair": [
+      " ",
+      "Pip"
+    ],
+    "merged": " Pip",
+    "frequency": 9
+  },
+  {
+    "rank": 8,
+    "pair": [
+      " ",
+      "b"
+    ],
+    "merged": " b",
+    "frequency": 9
+  },
+  {
+    "rank": 9,
+    "pair": [
+      " ",
+      "f"
+    ],
+    "merged": " f",
+    "frequency": 9
+  },
+  {
+    "rank": 10,
+    "pair": [
+      " ",
+      "w"
+    ],
+    "merged": " w",
+    "frequency": 9
+  },
+  {
+    "rank": 11,
+    "pair": [
+      " t",
+      "he"
+    ],
+    "merged": " the",
+    "frequency": 9
+  },
+  {
+    "rank": 12,
+    "pair": [
+      "a",
+      "r"
+    ],
+    "merged": "ar",
+    "frequency": 9
+  },
+  {
+    "rank": 13,
+    "pair": [
+      "n",
+      "d"
+    ],
+    "merged": "nd",
+    "frequency": 8
+  },
+  {
+    "rank": 14,
+    "pair": [
+      " a",
+      "nd"
+    ],
+    "merged": " and",
+    "frequency": 6
+  },
+  {
+    "rank": 15,
+    "pair": [
+      " t",
+      "o"
+    ],
+    "merged": " to",
+    "frequency": 6
+  },
+  {
+    "rank": 16,
+    "pair": [
+      "a",
+      "y"
+    ],
+    "merged": "ay",
+    "frequency": 6
+  },
+  {
+    "rank": 17,
+    "pair": [
+      "r",
+      "e"
+    ],
+    "merged": "re",
+    "frequency": 6
+  },
+  {
+    "rank": 18,
+    "pair": [
+      " ",
+      "h"
+    ],
+    "merged": " h",
+    "frequency": 5
+  },
+  {
+    "rank": 19,
+    "pair": [
+      " s",
+      "a"
+    ],
+    "merged": " sa",
+    "frequency": 5
+  },
+  {
+    "rank": 20,
+    "pair": [
+      " s",
+      "t"
+    ],
+    "merged": " st",
+    "frequency": 5
+  },
+  {
+    "rank": 21,
+    "pair": [
+      " st",
+      "ar"
+    ],
+    "merged": " star",
+    "frequency": 5
+  },
+  {
+    "rank": 22,
+    "pair": [
+      "i",
+      "g"
+    ],
+    "merged": "ig",
+    "frequency": 5
+  },
+  {
+    "rank": 23,
+    "pair": [
+      " ",
+      "d"
+    ],
+    "merged": " d",
+    "frequency": 4
+  },
+  {
+    "rank": 24,
+    "pair": [
+      " t",
+      "h"
+    ],
+    "merged": " th",
+    "frequency": 4
+  },
+  {
+    "rank": 25,
+    "pair": [
+      " w",
+      "a"
+    ],
+    "merged": " wa",
+    "frequency": 4
+  },
+  {
+    "rank": 26,
+    "pair": [
+      "e",
+      "d"
+    ],
+    "merged": "ed",
+    "frequency": 4
+  },
+  {
+    "rank": 27,
+    "pair": [
+      "i",
+      "n"
+    ],
+    "merged": "in",
+    "frequency": 4
+  },
+  {
+    "rank": 28,
+    "pair": [
+      "l",
+      "e"
+    ],
+    "merged": "le",
+    "frequency": 4
+  },
+  {
+    "rank": 29,
+    "pair": [
+      "l",
+      "y"
+    ],
+    "merged": "ly",
+    "frequency": 4
+  },
+  {
+    "rank": 30,
+    "pair": [
+      "o",
+      "m"
+    ],
+    "merged": "om",
+    "frequency": 4
+  },
+  {
+    "rank": 31,
+    "pair": [
+      "u",
+      "t"
+    ],
+    "merged": "ut",
+    "frequency": 4
+  },
+  {
+    "rank": 32,
+    "pair": [
+      " ",
+      "l"
+    ],
+    "merged": " l",
+    "frequency": 3
+  },
+  {
+    "rank": 33,
+    "pair": [
+      " ",
+      "n"
+    ],
+    "merged": " n",
+    "frequency": 3
+  },
+  {
+    "rank": 34,
+    "pair": [
+      " ",
+      "o"
+    ],
+    "merged": " o",
+    "frequency": 3
+  },
+  {
+    "rank": 35,
+    "pair": [
+      " ",
+      "u"
+    ],
+    "merged": " u",
+    "frequency": 3
+  },
+  {
+    "rank": 36,
+    "pair": [
+      " b",
+      "e"
+    ],
+    "merged": " be",
+    "frequency": 3
+  },
+  {
+    "rank": 37,
+    "pair": [
+      " d",
+      "ay"
+    ],
+    "merged": " day",
+    "frequency": 3
+  },
+  {
+    "rank": 38,
+    "pair": [
+      " h",
+      "ig"
+    ],
+    "merged": " hig",
+    "frequency": 3
+  },
+  {
+    "rank": 39,
+    "pair": [
+      " th",
+      "a"
+    ],
+    "merged": " tha",
+    "frequency": 3
+  },
+  {
+    "rank": 40,
+    "pair": [
+      " tha",
+      "t"
+    ],
+    "merged": " that",
+    "frequency": 3
+  },
+  {
+    "rank": 41,
+    "pair": [
+      " u",
+      "p"
+    ],
+    "merged": " up",
+    "frequency": 3
+  },
+  {
+    "rank": 42,
+    "pair": [
+      " wa",
+      "s"
+    ],
+    "merged": " was",
+    "frequency": 3
+  },
+  {
+    "rank": 43,
+    "pair": [
+      "T",
+      "he"
+    ],
+    "merged": "The",
+    "frequency": 3
+  },
+  {
+    "rank": 44,
+    "pair": [
+      "le",
+      "w"
+    ],
+    "merged": "lew",
+    "frequency": 3
+  },
+  {
+    "rank": 45,
+    "pair": [
+      "r",
+      "om"
+    ],
+    "merged": "rom",
+    "frequency": 3
+  },
+  {
+    "rank": 46,
+    "pair": [
+      "v",
+      "e"
+    ],
+    "merged": "ve",
+    "frequency": 3
+  },
+  {
+    "rank": 47,
+    "pair": [
+      " ",
+      "The"
+    ],
+    "merged": " The",
+    "frequency": 2
+  },
+  {
+    "rank": 48,
+    "pair": [
+      " ",
+      "m"
+    ],
+    "merged": " m",
+    "frequency": 2
+  },
+  {
+    "rank": 49,
+    "pair": [
+      " b",
+      "ut"
+    ],
+    "merged": " but",
+    "frequency": 2
+  },
+  {
+    "rank": 50,
+    "pair": [
+      " be",
+      "a"
+    ],
+    "merged": " bea",
+    "frequency": 2
+  },
+  {
+    "rank": 51,
+    "pair": [
+      " bea",
+      "ut"
+    ],
+    "merged": " beaut",
+    "frequency": 2
+  },
+  {
+    "rank": 52,
+    "pair": [
+      " beaut",
+      "i"
+    ],
+    "merged": " beauti",
+    "frequency": 2
+  },
+  {
+    "rank": 53,
+    "pair": [
+      " beauti",
+      "f"
+    ],
+    "merged": " beautif",
+    "frequency": 2
+  },
+  {
+    "rank": 54,
+    "pair": [
+      " beautif",
+      "u"
+    ],
+    "merged": " beautifu",
+    "frequency": 2
+  },
+  {
+    "rank": 55,
+    "pair": [
+      " beautifu",
+      "l"
+    ],
+    "merged": " beautiful",
+    "frequency": 2
+  },
+  {
+    "rank": 56,
+    "pair": [
+      " f",
+      "ar"
+    ],
+    "merged": " far",
+    "frequency": 2
+  },
+  {
+    "rank": 57,
+    "pair": [
+      " f",
+      "e"
+    ],
+    "merged": " fe",
+    "frequency": 2
+  },
+  {
+    "rank": 58,
+    "pair": [
+      " f",
+      "lew"
+    ],
+    "merged": " flew",
+    "frequency": 2
+  },
+  {
+    "rank": 59,
+    "pair": [
+      " h",
+      "a"
+    ],
+    "merged": " ha",
+    "frequency": 2
+  },
+  {
+    "rank": 60,
+    "pair": [
+      " ha",
+      "p"
+    ],
+    "merged": " hap",
+    "frequency": 2
+  },
+  {
+    "rank": 61,
+    "pair": [
+      " hap",
+      "p"
+    ],
+    "merged": " happ",
+    "frequency": 2
+  },
+  {
+    "rank": 62,
+    "pair": [
+      " hig",
+      "he"
+    ],
+    "merged": " highe",
+    "frequency": 2
+  },
+  {
+    "rank": 63,
+    "pair": [
+      " highe",
+      "r"
+    ],
+    "merged": " higher",
+    "frequency": 2
+  },
+  {
+    "rank": 64,
+    "pair": [
+      " l",
+      "o"
+    ],
+    "merged": " lo",
+    "frequency": 2
+  },
+  {
+    "rank": 65,
+    "pair": [
+      " s",
+      "u"
+    ],
+    "merged": " su",
+    "frequency": 2
+  },
+  {
+    "rank": 66,
+    "pair": [
+      " sa",
+      "w"
+    ],
+    "merged": " saw",
+    "frequency": 2
+  },
+  {
+    "rank": 67,
+    "pair": [
+      " su",
+      "n"
+    ],
+    "merged": " sun",
+    "frequency": 2
+  },
+  {
+    "rank": 68,
+    "pair": [
+      " t",
+      "i"
+    ],
+    "merged": " ti",
+    "frequency": 2
+  },
+  {
+    "rank": 69,
+    "pair": [
+      " t",
+      "re"
+    ],
+    "merged": " tre",
+    "frequency": 2
+  },
+  {
+    "rank": 70,
+    "pair": [
+      " tre",
+      "e"
+    ],
+    "merged": " tree",
+    "frequency": 2
+  },
+  {
+    "rank": 71,
+    "pair": [
+      " w",
+      "ar"
+    ],
+    "merged": " war",
+    "frequency": 2
+  },
+  {
+    "rank": 72,
+    "pair": [
+      " war",
+      "m"
+    ],
+    "merged": " warm",
+    "frequency": 2
+  },
+  {
+    "rank": 73,
+    "pair": [
+      "F",
+      "rom"
+    ],
+    "merged": "From",
+    "frequency": 2
+  },
+  {
+    "rank": 74,
+    "pair": [
+      "O",
+      "n"
+    ],
+    "merged": "On",
+    "frequency": 2
+  },
+  {
+    "rank": 75,
+    "pair": [
+      "a",
+      "l"
+    ],
+    "merged": "al",
+    "frequency": 2
+  },
+  {
+    "rank": 76,
+    "pair": [
+      "a",
+      "m"
+    ],
+    "merged": "am",
+    "frequency": 2
+  },
+  {
+    "rank": 77,
+    "pair": [
+      "d",
+      "e"
+    ],
+    "merged": "de",
+    "frequency": 2
+  },
+  {
+    "rank": 78,
+    "pair": [
+      "i",
+      "d"
+    ],
+    "merged": "id",
+    "frequency": 2
+  },
+  {
+    "rank": 79,
+    "pair": [
+      "in",
+      "g"
+    ],
+    "merged": "ing",
+    "frequency": 2
+  },
+  {
+    "rank": 80,
+    "pair": [
+      "n",
+      "g"
+    ],
+    "merged": "ng",
+    "frequency": 2
+  },
+  {
+    "rank": 81,
+    "pair": [
+      "o",
+      "k"
+    ],
+    "merged": "ok",
+    "frequency": 2
+  },
+  {
+    "rank": 82,
+    "pair": [
+      "r",
+      "y"
+    ],
+    "merged": "ry",
+    "frequency": 2
+  },
+  {
+    "rank": 83,
+    "pair": [
+      "ve",
+      "ry"
+    ],
+    "merged": "very",
+    "frequency": 2
+  },
+  {
+    "rank": 84,
+    "pair": [
+      " ",
+      "c"
+    ],
+    "merged": " c",
+    "frequency": 1
+  },
+  {
+    "rank": 85,
+    "pair": [
+      " ",
+      "e"
+    ],
+    "merged": " e",
+    "frequency": 1
+  },
+  {
+    "rank": 86,
+    "pair": [
+      " ",
+      "g"
+    ],
+    "merged": " g",
+    "frequency": 1
+  },
+  {
+    "rank": 87,
+    "pair": [
+      " ",
+      "he"
+    ],
+    "merged": " he",
+    "frequency": 1
+  },
+  {
+    "rank": 88,
+    "pair": [
+      " ",
+      "i"
+    ],
+    "merged": " i",
+    "frequency": 1
+  },
+  {
+    "rank": 89,
+    "pair": [
+      " ",
+      "in"
+    ],
+    "merged": " in",
+    "frequency": 1
+  },
+  {
+    "rank": 90,
+    "pair": [
+      " ",
+      "re"
+    ],
+    "merged": " re",
+    "frequency": 1
+  },
+  {
+    "rank": 91,
+    "pair": [
+      " ",
+      "very"
+    ],
+    "merged": " very",
+    "frequency": 1
+  },
+  {
+    "rank": 92,
+    "pair": [
+      " a",
+      "l"
+    ],
+    "merged": " al",
+    "frequency": 1
+  },
+  {
+    "rank": 93,
+    "pair": [
+      " a",
+      "re"
+    ],
+    "merged": " are",
+    "frequency": 1
+  },
+  {
+    "rank": 94,
+    "pair": [
+      " a",
+      "w"
+    ],
+    "merged": " aw",
+    "frequency": 1
+  },
+  {
+    "rank": 95,
+    "pair": [
+      " al",
+      "l"
+    ],
+    "merged": " all",
+    "frequency": 1
+  },
+  {
+    "rank": 96,
+    "pair": [
+      " aw",
+      "ay"
+    ],
+    "merged": " away",
+    "frequency": 1
+  },
+  {
+    "rank": 97,
+    "pair": [
+      " b",
+      "i"
+    ],
+    "merged": " bi",
+    "frequency": 1
+  },
+  {
+    "rank": 98,
+    "pair": [
+      " b",
+      "ig"
+    ],
+    "merged": " big",
+    "frequency": 1
+  },
+  {
+    "rank": 99,
+    "pair": [
+      " b",
+      "lew"
+    ],
+    "merged": " blew",
+    "frequency": 1
+  },
+  {
+    "rank": 100,
+    "pair": [
+      " b",
+      "r"
+    ],
+    "merged": " br",
+    "frequency": 1
+  },
+  {
+    "rank": 101,
+    "pair": [
+      " be",
+      "c"
+    ],
+    "merged": " bec",
+    "frequency": 1
+  },
+  {
+    "rank": 102,
+    "pair": [
+      " bec",
+      "am"
+    ],
+    "merged": " becam",
+    "frequency": 1
+  },
+  {
+    "rank": 103,
+    "pair": [
+      " becam",
+      "e"
+    ],
+    "merged": " became",
+    "frequency": 1
+  },
+  {
+    "rank": 104,
+    "pair": [
+      " bi",
+      "r"
+    ],
+    "merged": " bir",
+    "frequency": 1
+  },
+  {
+    "rank": 105,
+    "pair": [
+      " bir",
+      "d"
+    ],
+    "merged": " bird",
+    "frequency": 1
+  },
+  {
+    "rank": 106,
+    "pair": [
+      " br",
+      "ig"
+    ],
+    "merged": " brig",
+    "frequency": 1
+  },
+  {
+    "rank": 107,
+    "pair": [
+      " brig",
+      "h"
+    ],
+    "merged": " brigh",
+    "frequency": 1
+  },
+  {
+    "rank": 108,
+    "pair": [
+      " brigh",
+      "t"
+    ],
+    "merged": " bright",
+    "frequency": 1
+  },
+  {
+    "rank": 109,
+    "pair": [
+      " c",
+      "l"
+    ],
+    "merged": " cl",
+    "frequency": 1
+  },
+  {
+    "rank": 110,
+    "pair": [
+      " cl",
+      "o"
+    ],
+    "merged": " clo",
+    "frequency": 1
+  },
+  {
+    "rank": 111,
+    "pair": [
+      " clo",
+      "s"
+    ],
+    "merged": " clos",
+    "frequency": 1
+  },
+  {
+    "rank": 112,
+    "pair": [
+      " clos",
+      "e"
+    ],
+    "merged": " close",
+    "frequency": 1
+  },
+  {
+    "rank": 113,
+    "pair": [
+      " d",
+      "id"
+    ],
+    "merged": " did",
+    "frequency": 1
+  },
+  {
+    "rank": 114,
+    "pair": [
+      " e",
+      "very"
+    ],
+    "merged": " every",
+    "frequency": 1
+  },
+  {
+    "rank": 115,
+    "pair": [
+      " f",
+      "ly"
+    ],
+    "merged": " fly",
+    "frequency": 1
+  },
+  {
+    "rank": 116,
+    "pair": [
+      " f",
+      "r"
+    ],
+    "merged": " fr",
+    "frequency": 1
+  },
+  {
+    "rank": 117,
+    "pair": [
+      " f",
+      "rom"
+    ],
+    "merged": " from",
+    "frequency": 1
+  },
+  {
+    "rank": 118,
+    "pair": [
+      " fe",
+      "e"
+    ],
+    "merged": " fee",
+    "frequency": 1
+  },
+  {
+    "rank": 119,
+    "pair": [
+      " fe",
+      "l"
+    ],
+    "merged": " fel",
+    "frequency": 1
+  },
+  {
+    "rank": 120,
+    "pair": [
+      " fee",
+      "l"
+    ],
+    "merged": " feel",
+    "frequency": 1
+  },
+  {
+    "rank": 121,
+    "pair": [
+      " fel",
+      "t"
+    ],
+    "merged": " felt",
+    "frequency": 1
+  },
+  {
+    "rank": 122,
+    "pair": [
+      " fr",
+      "i"
+    ],
+    "merged": " fri",
+    "frequency": 1
+  },
+  {
+    "rank": 123,
+    "pair": [
+      " fri",
+      "e"
+    ],
+    "merged": " frie",
+    "frequency": 1
+  },
+  {
+    "rank": 124,
+    "pair": [
+      " frie",
+      "nd"
+    ],
+    "merged": " friend",
+    "frequency": 1
+  },
+  {
+    "rank": 125,
+    "pair": [
+      " friend",
+      "ly"
+    ],
+    "merged": " friendly",
+    "frequency": 1
+  },
+  {
+    "rank": 126,
+    "pair": [
+      " g",
+      "i"
+    ],
+    "merged": " gi",
+    "frequency": 1
+  },
+  {
+    "rank": 127,
+    "pair": [
+      " gi",
+      "ve"
+    ],
+    "merged": " give",
+    "frequency": 1
+  },
+  {
+    "rank": 128,
+    "pair": [
+      " happ",
+      "i"
+    ],
+    "merged": " happi",
+    "frequency": 1
+  },
+  {
+    "rank": 129,
+    "pair": [
+      " happ",
+      "y"
+    ],
+    "merged": " happy",
+    "frequency": 1
+  },
+  {
+    "rank": 130,
+    "pair": [
+      " happi",
+      "ly"
+    ],
+    "merged": " happily",
+    "frequency": 1
+  },
+  {
+    "rank": 131,
+    "pair": [
+      " hig",
+      "h"
+    ],
+    "merged": " high",
+    "frequency": 1
+  },
+  {
+    "rank": 132,
+    "pair": [
+      " i",
+      "s"
+    ],
+    "merged": " is",
+    "frequency": 1
+  },
+  {
+    "rank": 133,
+    "pair": [
+      " l",
+      "i"
+    ],
+    "merged": " li",
+    "frequency": 1
+  },
+  {
+    "rank": 134,
+    "pair": [
+      " li",
+      "t"
+    ],
+    "merged": " lit",
+    "frequency": 1
+  },
+  {
+    "rank": 135,
+    "pair": [
+      " lit",
+      "t"
+    ],
+    "merged": " litt",
+    "frequency": 1
+  },
+  {
+    "rank": 136,
+    "pair": [
+      " litt",
+      "le"
+    ],
+    "merged": " little",
+    "frequency": 1
+  },
+  {
+    "rank": 137,
+    "pair": [
+      " lo",
+      "ok"
+    ],
+    "merged": " look",
+    "frequency": 1
+  },
+  {
+    "rank": 138,
+    "pair": [
+      " lo",
+      "v"
+    ],
+    "merged": " lov",
+    "frequency": 1
+  },
+  {
+    "rank": 139,
+    "pair": [
+      " look",
+      "ed"
+    ],
+    "merged": " looked",
+    "frequency": 1
+  },
+  {
+    "rank": 140,
+    "pair": [
+      " lov",
+      "ed"
+    ],
+    "merged": " loved",
+    "frequency": 1
+  },
+  {
+    "rank": 141,
+    "pair": [
+      " m",
+      "a"
+    ],
+    "merged": " ma",
+    "frequency": 1
+  },
+  {
+    "rank": 142,
+    "pair": [
+      " m",
+      "o"
+    ],
+    "merged": " mo",
+    "frequency": 1
+  },
+  {
+    "rank": 143,
+    "pair": [
+      " ma",
+      "de"
+    ],
+    "merged": " made",
+    "frequency": 1
+  },
+  {
+    "rank": 144,
+    "pair": [
+      " mo",
+      "r"
+    ],
+    "merged": " mor",
+    "frequency": 1
+  },
+  {
+    "rank": 145,
+    "pair": [
+      " mor",
+      "n"
+    ],
+    "merged": " morn",
+    "frequency": 1
+  },
+  {
+    "rank": 146,
+    "pair": [
+      " morn",
+      "ing"
+    ],
+    "merged": " morning",
+    "frequency": 1
+  },
+  {
+    "rank": 147,
+    "pair": [
+      " n",
+      "am"
+    ],
+    "merged": " nam",
+    "frequency": 1
+  },
+  {
+    "rank": 148,
+    "pair": [
+      " n",
+      "e"
+    ],
+    "merged": " ne",
+    "frequency": 1
+  },
+  {
+    "rank": 149,
+    "pair": [
+      " n",
+      "o"
+    ],
+    "merged": " no",
+    "frequency": 1
+  },
+  {
+    "rank": 150,
+    "pair": [
+      " nam",
+      "ed"
+    ],
+    "merged": " named",
+    "frequency": 1
+  },
+  {
+    "rank": 151,
+    "pair": [
+      " ne",
+      "x"
+    ],
+    "merged": " nex",
+    "frequency": 1
+  },
+  {
+    "rank": 152,
+    "pair": [
+      " nex",
+      "t"
+    ],
+    "merged": " next",
+    "frequency": 1
+  },
+  {
+    "rank": 153,
+    "pair": [
+      " no",
+      "t"
+    ],
+    "merged": " not",
+    "frequency": 1
+  },
+  {
+    "rank": 154,
+    "pair": [
+      " o",
+      "f"
+    ],
+    "merged": " of",
+    "frequency": 1
+  },
+  {
+    "rank": 155,
+    "pair": [
+      " o",
+      "k"
+    ],
+    "merged": " ok",
+    "frequency": 1
+  },
+  {
+    "rank": 156,
+    "pair": [
+      " o",
+      "n"
+    ],
+    "merged": " on",
+    "frequency": 1
+  },
+  {
+    "rank": 157,
+    "pair": [
+      " ok",
+      "ay"
+    ],
+    "merged": " okay",
+    "frequency": 1
+  },
+  {
+    "rank": 158,
+    "pair": [
+      " re",
+      "al"
+    ],
+    "merged": " real",
+    "frequency": 1
+  },
+  {
+    "rank": 159,
+    "pair": [
+      " real",
+      "i"
+    ],
+    "merged": " reali",
+    "frequency": 1
+  },
+  {
+    "rank": 160,
+    "pair": [
+      " reali",
+      "z"
+    ],
+    "merged": " realiz",
+    "frequency": 1
+  },
+  {
+    "rank": 161,
+    "pair": [
+      " realiz",
+      "ed"
+    ],
+    "merged": " realized",
+    "frequency": 1
+  },
+  {
+    "rank": 162,
+    "pair": [
+      " s",
+      "h"
+    ],
+    "merged": " sh",
+    "frequency": 1
+  },
+  {
+    "rank": 163,
+    "pair": [
+      " s",
+      "k"
+    ],
+    "merged": " sk",
+    "frequency": 1
+  },
+  {
+    "rank": 164,
+    "pair": [
+      " s",
+      "o"
+    ],
+    "merged": " so",
+    "frequency": 1
+  },
+  {
+    "rank": 165,
+    "pair": [
+      " s",
+      "om"
+    ],
+    "merged": " som",
+    "frequency": 1
+  },
+  {
+    "rank": 166,
+    "pair": [
+      " sa",
+      "f"
+    ],
+    "merged": " saf",
+    "frequency": 1
+  },
+  {
+    "rank": 167,
+    "pair": [
+      " sa",
+      "id"
+    ],
+    "merged": " said",
+    "frequency": 1
+  },
+  {
+    "rank": 168,
+    "pair": [
+      " sa",
+      "ng"
+    ],
+    "merged": " sang",
+    "frequency": 1
+  },
+  {
+    "rank": 169,
+    "pair": [
+      " saf",
+      "e"
+    ],
+    "merged": " safe",
+    "frequency": 1
+  },
+  {
+    "rank": 170,
+    "pair": [
+      " sh",
+      "in"
+    ],
+    "merged": " shin",
+    "frequency": 1
+  },
+  {
+    "rank": 171,
+    "pair": [
+      " shin",
+      "y"
+    ],
+    "merged": " shiny",
+    "frequency": 1
+  },
+  {
+    "rank": 172,
+    "pair": [
+      " sk",
+      "y"
+    ],
+    "merged": " sky",
+    "frequency": 1
+  },
+  {
+    "rank": 173,
+    "pair": [
+      " so",
+      "ng"
+    ],
+    "merged": " song",
+    "frequency": 1
+  },
+  {
+    "rank": 174,
+    "pair": [
+      " som",
+      "e"
+    ],
+    "merged": " some",
+    "frequency": 1
+  },
+  {
+    "rank": 175,
+    "pair": [
+      " t",
+      "al"
+    ],
+    "merged": " tal",
+    "frequency": 1
+  },
+  {
+    "rank": 176,
+    "pair": [
+      " tal",
+      "l"
+    ],
+    "merged": " tall",
+    "frequency": 1
+  },
+  {
+    "rank": 177,
+    "pair": [
+      " th",
+      "ing"
+    ],
+    "merged": " thing",
+    "frequency": 1
+  },
+  {
+    "rank": 178,
+    "pair": [
+      " the",
+      "re"
+    ],
+    "merged": " there",
+    "frequency": 1
+  },
+  {
+    "rank": 179,
+    "pair": [
+      " thing",
+      "s"
+    ],
+    "merged": " things",
+    "frequency": 1
+  },
+  {
+    "rank": 180,
+    "pair": [
+      " ti",
+      "m"
+    ],
+    "merged": " tim",
+    "frequency": 1
+  },
+  {
+    "rank": 181,
+    "pair": [
+      " ti",
+      "re"
+    ],
+    "merged": " tire",
+    "frequency": 1
+  },
+  {
+    "rank": 182,
+    "pair": [
+      " tim",
+      "e"
+    ],
+    "merged": " time",
+    "frequency": 1
+  },
+  {
+    "rank": 183,
+    "pair": [
+      " tire",
+      "d"
+    ],
+    "merged": " tired",
+    "frequency": 1
+  },
+  {
+    "rank": 184,
+    "pair": [
+      " to",
+      "o"
+    ],
+    "merged": " too",
+    "frequency": 1
+  },
+  {
+    "rank": 185,
+    "pair": [
+      " to",
+      "p"
+    ],
+    "merged": " top",
+    "frequency": 1
+  },
+  {
+    "rank": 186,
+    "pair": [
+      " to",
+      "u"
+    ],
+    "merged": " tou",
+    "frequency": 1
+  },
+  {
+    "rank": 187,
+    "pair": [
+      " tou",
+      "c"
+    ],
+    "merged": " touc",
+    "frequency": 1
+  },
+  {
+    "rank": 188,
+    "pair": [
+      " touc",
+      "h"
+    ],
+    "merged": " touch",
+    "frequency": 1
+  },
+  {
+    "rank": 189,
+    "pair": [
+      " up",
+      "o"
+    ],
+    "merged": " upo",
+    "frequency": 1
+  },
+  {
+    "rank": 190,
+    "pair": [
+      " upo",
+      "n"
+    ],
+    "merged": " upon",
+    "frequency": 1
+  },
+  {
+    "rank": 191,
+    "pair": [
+      " w",
+      "ay"
+    ],
+    "merged": " way",
+    "frequency": 1
+  },
+  {
+    "rank": 192,
+    "pair": [
+      " w",
+      "i"
+    ],
+    "merged": " wi",
+    "frequency": 1
+  },
+  {
+    "rank": 193,
+    "pair": [
+      " w",
+      "ok"
+    ],
+    "merged": " wok",
+    "frequency": 1
+  },
+  {
+    "rank": 194,
+    "pair": [
+      " wa",
+      "n"
+    ],
+    "merged": " wan",
+    "frequency": 1
+  },
+  {
+    "rank": 195,
+    "pair": [
+      " wan",
+      "t"
+    ],
+    "merged": " want",
+    "frequency": 1
+  },
+  {
+    "rank": 196,
+    "pair": [
+      " wi",
+      "nd"
+    ],
+    "merged": " wind",
+    "frequency": 1
+  },
+  {
+    "rank": 197,
+    "pair": [
+      " wok",
+      "e"
+    ],
+    "merged": " woke",
+    "frequency": 1
+  },
+  {
+    "rank": 198,
+    "pair": [
+      ",",
+      "\""
+    ],
+    "merged": ",\"",
+    "frequency": 1
+  },
+  {
+    "rank": 199,
+    "pair": [
+      "On",
+      "c"
+    ],
+    "merged": "Onc",
+    "frequency": 1
+  },
+  {
+    "rank": 200,
+    "pair": [
+      "On",
+      "e"
+    ],
+    "merged": "One",
+    "frequency": 1
+  },
+  {
+    "rank": 201,
+    "pair": [
+      "Onc",
+      "e"
+    ],
+    "merged": "Once",
+    "frequency": 1
+  },
+  {
+    "rank": 202,
+    "pair": [
+      "S",
+      "u"
+    ],
+    "merged": "Su",
+    "frequency": 1
+  },
+  {
+    "rank": 203,
+    "pair": [
+      "Su",
+      "d"
+    ],
+    "merged": "Sud",
+    "frequency": 1
+  },
+  {
+    "rank": 204,
+    "pair": [
+      "Sud",
+      "de"
+    ],
+    "merged": "Sudde",
+    "frequency": 1
+  },
+  {
+    "rank": 205,
+    "pair": [
+      "Sudde",
+      "n"
+    ],
+    "merged": "Sudden",
+    "frequency": 1
+  },
+  {
+    "rank": 206,
+    "pair": [
+      "Sudden",
+      "ly"
+    ],
+    "merged": "Suddenly",
+    "frequency": 1
+  }
+]

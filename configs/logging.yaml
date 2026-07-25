@@ -1,0 +1,7 @@
+# Centralized Logging Configuration Settings
+version: 1
+disable_existing_loggers: false
+level: "INFO"                # options: "DEBUG", "INFO", "WARNING", "ERROR"
+format: "JSON"               # options: "JSON", "CONSOLE"
+file_path: "chatii.log"      # If set, write logs here too (relative to project root)
+enable_console: true

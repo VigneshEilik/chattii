@@ -1,0 +1,230 @@
+#version: 1.0.0
+e r
+e n
+o k
+i z
+ok en
+t oken
+o r
+iz er
+  =
+d e
+a l
+a t
+token izer
+  "
+c o
+i n
+a s
+s t
+a n
+t e
+co de
+m p
+s er
+" "
+at i
+ = =
+as ser
+asser t
+a b
+l o
+" ,
+a r
+i d
+o n
+r e
+c h
+m al
+or mal
+" )
+a g
+ag er
+an ager
+( "
+T e
+Te st
+in g
+l e
+n ormal
+s p
+te mp
+u n
+w or
+( )
+at h
+ati on
+c ab
+e c
+m anager
+o cab
+  en
+_ p
+a c
+n e
+"" "
+_ id
+a d
+a v
+av e
+e l
+el lo
+i al
+  Test
+_ tokenizer
+ati i
+ch atii
+f i
+fi le
+ne w
+r o
+s ave
+t r
+token s
+v ocab
+  tokenizer
+  wor
+T oken
+Token izer
+_ d
+_ t
+_d i
+_di r
+an d
+c or
+cor p
+corp u
+corpu s
+ec ial
+g e
+i code
+i mp
+imp or
+impor t
+iz ation
+iz e
+sp ecial
+st r
+temp _dir
+  and
+= "
+H ello
+ac t
+act er
+ar acter
+i t
+l d
+new _tokenizer
+u t
+  '
+  C
+  import
+  lo
+  manager
+ C h
+! "
+) )
+_ file
+_p ath
+_t o
+co d
+cod ing
+corpus _file
+de code
+en code
+f ro
+fro m
+id s
+in e
+normal izer
+s e
+save _path
+t ok
+x t
+  -
+  N
+  P
+  W
+  te
+ - >
+ N on
+ Non e
+ P ath
+ en g
+ eng ine
+ te st
+ test _
+ wor ld
+Test s
+_ tokens
+_p re
+_to _id
+ab c
+ad d
+ar y
+c as
+de f
+ge x
+it h
+l ary
+normal ization
+p re
+special _tokens
+token _to_id
+u lary
+un icode
+wor d
+  /
+  add
+  chatii
+  d
+  f
+  s
+ " <
+ Ch aracter
+ Character Tokenizer
+ W or
+ Wor d
+ Word Tokenizer
+ en coding
+F al
+Fal se
+[ "
+_ special_tokens
+_pre tok
+a in
+cas e
+ch ar
+i p
+tr ain
+un k
+unicode _
+vocab _
+  +
+  1
+  4
+  R
+  U
+  V
+  new_tokenizer
+  normalizer
+  o
+  ro
+  sp
+  special
+  temp
+  tokens
+  vocab
+  w
+ 1 0
+ R e
+ Re gex
+ Regex P
+ RegexP re
+ RegexPre tokenizer
+ U n
+ Un icode
+ V ocab
+ Vocab ulary
+ Vocabulary M
+ VocabularyM anager

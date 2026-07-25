@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "parent_version": null,
+  "algorithm": "bpe",
+  "created_at": "2026-07-25T14:25:21.675072Z",
+  "vocab_size": 245,
+  "reserved_tokens": [
+    "<pad>",
+    "<unk>",
+    "<s>",
+    "</s>",
+    "<mask>"
+  ],
+  "normalization": "NFKC",
+  "lowercase": false,
+  "min_frequency": 1,
+  "dataset_provenance": {
+    "name": "bpe_training"
+  },
+  "builder_version": "1.0.0"
+}

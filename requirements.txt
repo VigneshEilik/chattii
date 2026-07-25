@@ -1,0 +1,25 @@
+#
+# This file is generated / synchronized from pyproject.toml
+#
+
+# Core Dependencies
+torch>=2.1.0
+numpy>=1.24.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+pyyaml>=6.0.1
+fastapi>=0.104.0
+uvicorn>=0.24.0
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+psycopg2-binary>=2.9.9
+redis>=5.0.1
+faiss-cpu>=1.7.4
+datasets>=2.14.0
+sentencepiece>=0.1.99
+
+# Dev Dependencies (included for easy environment setup)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+ruff>=0.1.5
+mypy>=1.7.0

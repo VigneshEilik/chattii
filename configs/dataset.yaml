@@ -1,0 +1,11 @@
+# Dataset Processing and Source Configurations
+name: "tinystories"
+path: "datasets/download/tinystories"
+format: "text"              # options: "text", "csv", "json"
+splits:
+  train: "train.txt"
+  validation: "validation.txt"
+tokenized_path: "datasets/tokenized/tinystories"
+cache_dir: "datasets/cache"
+validation_split_ratio: 0.05
+seed: 42
