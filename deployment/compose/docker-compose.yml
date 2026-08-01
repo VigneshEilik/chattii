@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  chatii-api:
+    build:
+      context: ../../
+      dockerfile: deployment/docker/Dockerfile.cpu
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=production
+      - CHATII_API_KEY=chatii-admin-root-key
+    volumes:
+      - chatii-cache:/root/.cache
+    restart: always
+
+volumes:
+  chatii-cache:

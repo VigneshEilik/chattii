@@ -17,9 +17,15 @@ class QualityValidator(BaseValidator):
         char_len = len(text)
 
         if char_len < self.min_length:
-            return False, f"Length ({char_len}) is below minimum threshold ({self.min_length})"
+            return (
+                False,
+                f"Length ({char_len}) is below minimum threshold ({self.min_length})",
+            )
         if char_len > self.max_length:
-            return False, f"Length ({char_len}) exceeds maximum threshold ({self.max_length})"
+            return (
+                False,
+                f"Length ({char_len}) exceeds maximum threshold ({self.max_length})",
+            )
 
         # Heuristic 1: Special character ratio
         special_chars = len(re.findall(r"[^a-zA-Z0-9\s]", text))

@@ -53,5 +53,5 @@ class ParquetLoader(BaseLoader):
                     yield TextSample(
                         text=str(text),
                         sample_id=f"parquet_{rg_idx}_{row_idx}",
-                        metadata=meta
+                        metadata=meta,
                     )

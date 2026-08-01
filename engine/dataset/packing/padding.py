@@ -4,7 +4,9 @@ from engine.dataset.base.dataset import TokenizedSample
 class PaddingHandler:
     """Pads short token sequences to the target context length using padding tokens."""
 
-    def __init__(self, max_length: int = 2048, pad_token_id: int = 0, ignore_index: int = -100) -> None:
+    def __init__(
+        self, max_length: int = 2048, pad_token_id: int = 0, ignore_index: int = -100
+    ) -> None:
         self.max_length = max_length
         self.pad_token_id = pad_token_id
         self.ignore_index = ignore_index

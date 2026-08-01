@@ -34,13 +34,11 @@ class JsonlLoader(BaseLoader):
                     text = item
                 elif isinstance(item, dict):
                     text = item.get("text", item.get("content", str(item)))
-                    meta.update({k: v for k, v in item.items() if k not in ("text", "content")})
+                    meta.update(
+                        {k: v for k, v in item.items() if k not in ("text", "content")}
+                    )
                 else:
                     text = str(item)
 
                 if text:
-                    yield TextSample(
-                        text=text,
-                        sample_id=f"jsonl_{idx}",
-                        metadata=meta
-                    )
+                    yield TextSample(text=text, sample_id=f"jsonl_{idx}", metadata=meta)

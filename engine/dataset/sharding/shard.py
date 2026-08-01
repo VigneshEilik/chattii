@@ -7,7 +7,9 @@ from engine.dataset.base.dataset import TextSample
 class DatasetSharder:
     """Splits a stream of text samples into sharded files on disk."""
 
-    def __init__(self, out_dir: str, prefix: str = "shard", samples_per_shard: int = 1000) -> None:
+    def __init__(
+        self, out_dir: str, prefix: str = "shard", samples_per_shard: int = 1000
+    ) -> None:
         self.out_dir = out_dir
         self.prefix = prefix
         self.samples_per_shard = samples_per_shard

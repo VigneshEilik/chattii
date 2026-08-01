@@ -7,11 +7,17 @@ class DatasetReportGenerator:
 
     @staticmethod
     def generate_report(
-        stats: Dict[str, Any], output_path: str, cleaning_info: Optional[Dict[str, Any]] = None
+        stats: Dict[str, Any],
+        output_path: str,
+        cleaning_info: Optional[Dict[str, Any]] = None,
     ) -> str:
         cleaning_info = cleaning_info or {}
         lang_data = stats.get("languages", {"en": 1})
-        primary_lang = max(lang_data.keys(), key=lambda k: lang_data[k]) if lang_data else "unknown"
+        primary_lang = (
+            max(lang_data.keys(), key=lambda k: lang_data[k])
+            if lang_data
+            else "unknown"
+        )
 
         char_stats = stats.get("char_stats", {})
         token_stats = stats.get("token_stats", {})

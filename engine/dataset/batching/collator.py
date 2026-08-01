@@ -12,9 +12,13 @@ class DataCollator:
         self.pad_token_id = pad_token_id
         self.ignore_index = ignore_index
 
-    def collate(self, samples: List[TokenizedSample]) -> Tuple[torch.Tensor, torch.Tensor]:
+    def collate(
+        self, samples: List[TokenizedSample]
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
         # Convert lists to PyTorch Tensors
-        input_ids_tensors = [torch.tensor(s.input_ids, dtype=torch.long) for s in samples]
+        input_ids_tensors = [
+            torch.tensor(s.input_ids, dtype=torch.long) for s in samples
+        ]
         labels_tensors = [
             torch.tensor(s.labels, dtype=torch.long)
             if s.labels is not None

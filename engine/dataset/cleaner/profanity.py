@@ -21,6 +21,7 @@ class ProfanityCleaner(BaseCleaner):
                 if self.redact:
                     # Case insensitive replace
                     import re
+
                     pattern = re.compile(re.escape(word), re.IGNORECASE)
                     text = pattern.sub(" [REDACTED] ", text)
 

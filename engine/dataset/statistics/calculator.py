@@ -53,7 +53,9 @@ class DatasetStatisticsCalculator:
 
         unique_tokens = len(self.token_freq)
         coverage = (unique_tokens / max(1, vocab_size)) * 100
-        oov_tokens = self.token_freq.get(0, 0)  # Standard BPE unknown fallback token is 0 or unk
+        oov_tokens = self.token_freq.get(
+            0, 0
+        )  # Standard BPE unknown fallback token is 0 or unk
         oov_ratio = (oov_tokens / max(1, self.token_count)) * 100
         padding_pct = (self.pad_count / max(1, self.token_count)) * 100
 

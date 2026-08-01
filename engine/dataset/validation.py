@@ -46,8 +46,12 @@ class DatasetValidator:
 
         encoding_validator = EncodingValidator()
         corruption_validator = CorruptionValidator()
-        quality_validator = QualityValidator(min_length=config.min_length, max_length=config.max_length)
-        duplicate_validator = DuplicateValidator(exact=config.deduplicate, near_dup=False)
+        quality_validator = QualityValidator(
+            min_length=config.min_length, max_length=config.max_length
+        )
+        duplicate_validator = DuplicateValidator(
+            exact=config.deduplicate, near_dup=False
+        )
 
         total = 0
         passed = 0
@@ -58,7 +62,12 @@ class DatasetValidator:
             total += 1
             cleaned = cleaning_pipeline.clean(sample)
 
-            validators = [encoding_validator, corruption_validator, quality_validator, duplicate_validator]
+            validators = [
+                encoding_validator,
+                corruption_validator,
+                quality_validator,
+                duplicate_validator,
+            ]
             is_valid = True
             for v in validators:
                 valid, reason = v.validate(cleaned)

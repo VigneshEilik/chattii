@@ -48,10 +48,12 @@ class CsvLoader(BaseLoader):
                     }
                     # Include key-value headers in metadata if row matches header len
                     if len(row) == len(header):
-                        meta.update({header[i]: row[i] for i in range(len(header)) if i != text_col_idx})
+                        meta.update(
+                            {
+                                header[i]: row[i]
+                                for i in range(len(header))
+                                if i != text_col_idx
+                            }
+                        )
 
-                    yield TextSample(
-                        text=text,
-                        sample_id=f"csv_{idx}",
-                        metadata=meta
-                    )
+                    yield TextSample(text=text, sample_id=f"csv_{idx}", metadata=meta)

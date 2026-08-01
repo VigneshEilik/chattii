@@ -1,11 +1,12 @@
+import csv
+import json
 import os
 import tempfile
-import json
-import csv
-from engine.dataset.loader.text import TextLoader
+
+from engine.dataset.loader.csv import CsvLoader
 from engine.dataset.loader.json import JsonLoader
 from engine.dataset.loader.jsonl import JsonlLoader
-from engine.dataset.loader.csv import CsvLoader
+from engine.dataset.loader.text import TextLoader
 
 
 def test_text_loader() -> None:
@@ -55,7 +56,9 @@ def test_jsonl_loader() -> None:
 
 
 def test_csv_loader() -> None:
-    with tempfile.NamedTemporaryFile(mode="w", newline="", delete=False, encoding="utf-8") as f:
+    with tempfile.NamedTemporaryFile(
+        mode="w", newline="", delete=False, encoding="utf-8"
+    ) as f:
         writer = csv.writer(f)
         writer.writerow(["text", "label"])
         writer.writerow(["Sample 1", "0"])

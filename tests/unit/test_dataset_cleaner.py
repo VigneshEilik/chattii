@@ -1,11 +1,11 @@
 from engine.dataset.base.dataset import TextSample
-from engine.dataset.cleaner.whitespace import WhitespaceCleaner
-from engine.dataset.cleaner.unicode import UnicodeCleaner
-from engine.dataset.cleaner.html import HTMLCleaner
-from engine.dataset.cleaner.emoji import EmojiCleaner
 from engine.dataset.cleaner.control_chars import ControlCharacterCleaner
-from engine.dataset.cleaner.profanity import ProfanityCleaner
+from engine.dataset.cleaner.emoji import EmojiCleaner
+from engine.dataset.cleaner.html import HTMLCleaner
 from engine.dataset.cleaner.pipeline import CleaningPipeline
+from engine.dataset.cleaner.profanity import ProfanityCleaner
+from engine.dataset.cleaner.unicode import UnicodeCleaner
+from engine.dataset.cleaner.whitespace import WhitespaceCleaner
 
 
 def test_whitespace_cleaner() -> None:

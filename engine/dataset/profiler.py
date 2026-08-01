@@ -25,6 +25,7 @@ class DatasetProfiler:
         loader = DatasetFactory.create_loader(config)
 
         import tracemalloc
+
         tracemalloc.start()
 
         start = time.perf_counter()

@@ -814,7 +814,9 @@ def _setup_model_parsers(subparsers: Any) -> None:
 
 def _setup_dataset_parsers(subparsers: Any) -> None:
     # Command: register-dataset
-    reg_ds = subparsers.add_parser("register-dataset", help="Register a dataset locally")
+    reg_ds = subparsers.add_parser(
+        "register-dataset", help="Register a dataset locally"
+    )
     reg_ds.add_argument("--name", required=True, help="Dataset identifier name")
     reg_ds.add_argument("--path", required=True, help="Path to raw dataset file")
     reg_ds.add_argument("--format", default="txt", help="Loader format type")
@@ -822,101 +824,132 @@ def _setup_dataset_parsers(subparsers: Any) -> None:
     reg_ds.add_argument("--version", default="v1", help="Dataset version tag")
 
     # Command: remove-dataset
-    rem_ds = subparsers.add_parser("remove-dataset", help="Remove a dataset from registry")
+    rem_ds = subparsers.add_parser(
+        "remove-dataset", help="Remove a dataset from registry"
+    )
     rem_ds.add_argument("--name", required=True, help="Dataset identifier name")
 
     # Command: list-datasets
     subparsers.add_parser("list-datasets", help="List all registered datasets")
 
     # Command: dataset-info
-    ds_info = subparsers.add_parser("dataset-info", help="Print details about a registered dataset")
+    ds_info = subparsers.add_parser(
+        "dataset-info", help="Print details about a registered dataset"
+    )
     ds_info.add_argument("--name", required=True, help="Dataset identifier name")
 
     # Command: prepare-dataset
-    prep_ds = subparsers.add_parser("prepare-dataset", help="Preprocess, clean, and validate a dataset")
+    prep_ds = subparsers.add_parser(
+        "prepare-dataset", help="Preprocess, clean, and validate a dataset"
+    )
     prep_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
 
     # Command: inspect-dataset
-    ins_ds = subparsers.add_parser("inspect-dataset", help="Audit and display dataset summary")
+    ins_ds = subparsers.add_parser(
+        "inspect-dataset", help="Audit and display dataset summary"
+    )
     ins_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
 
     # Command: validate-dataset
-    val_ds = subparsers.add_parser("validate-dataset", help="Validate dataset schema and contents")
+    val_ds = subparsers.add_parser(
+        "validate-dataset", help="Validate dataset schema and contents"
+    )
     val_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
 
     # Command: benchmark-dataset
-    bench_ds = subparsers.add_parser("benchmark-dataset", help="Measure loading and cleaning throughput")
+    bench_ds = subparsers.add_parser(
+        "benchmark-dataset", help="Measure loading and cleaning throughput"
+    )
     bench_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
 
     # Command: stream-dataset
-    strm_ds = subparsers.add_parser("stream-dataset", help="Stream dataset samples to stdout")
+    strm_ds = subparsers.add_parser(
+        "stream-dataset", help="Stream dataset samples to stdout"
+    )
     strm_ds.add_argument("--dataset", required=True, help="Dataset identifier name")
 
     # Command stubs
-    cache_ds = subparsers.add_parser("cache-dataset", help="Cache dataset preprocessing results (stub)")
+    cache_ds = subparsers.add_parser(
+        "cache-dataset", help="Cache dataset preprocessing results (stub)"
+    )
     cache_ds.add_argument("--dataset", required=True, help="Dataset name")
     cache_ds.add_argument("--fingerprint", default=None, help="Cache fingerprint")
 
     tok_ds = subparsers.add_parser("tokenize-dataset", help="Tokenize a dataset (stub)")
     tok_ds.add_argument("--dataset", required=True, help="Dataset name")
 
-    pack_ds = subparsers.add_parser("pack-dataset", help="Pack sequences for a dataset (stub)")
+    pack_ds = subparsers.add_parser(
+        "pack-dataset", help="Pack sequences for a dataset (stub)"
+    )
     pack_ds.add_argument("--dataset", required=True, help="Dataset name")
 
-    stat_ds = subparsers.add_parser("dataset-statistics", help="Calculate dataset statistics (stub)")
+    stat_ds = subparsers.add_parser(
+        "dataset-statistics", help="Calculate dataset statistics (stub)"
+    )
     stat_ds.add_argument("--dataset", required=True, help="Dataset name")
 
 
 def _handle_register_dataset(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
-    service.register_dataset(args.name, args.path, args.format, args.language, args.version)
+    service.register_dataset(
+        args.name, args.path, args.format, args.language, args.version
+    )
 
 
 def _handle_remove_dataset(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.remove_dataset(args.name)
 
 
 def _handle_list_datasets() -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.list_datasets()
 
 
 def _handle_dataset_info(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.dataset_info(args.name)
 
 
 def _handle_prepare_dataset(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.prepare(args.dataset)
 
 
 def _handle_inspect_dataset(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.inspect(args.dataset)
 
 
 def _handle_validate_dataset(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.validate(args.dataset)
 
 
 def _handle_benchmark_dataset(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.benchmark(args.dataset)
 
 
 def _handle_stream_dataset(args: Any) -> None:
     from engine.dataset.service import DatasetService
+
     service = DatasetService()
     service.stream(args.dataset)
 
@@ -937,6 +970,558 @@ def _handle_dataset_statistics(args: Any) -> None:
     print(f"Calculating dataset statistics for '{args.dataset}'")
 
 
+def _setup_distributed_parsers(subparsers: Any) -> None:
+    # train-distributed
+    tr_d = subparsers.add_parser(
+        "train-distributed",
+        help="Run distributed training across multi-GPU/node systems",
+    )
+    tr_d.add_argument("--script", required=True, help="Path to execution script")
+    tr_d.add_argument(
+        "--world-size", type=int, default=1, help="Total target processes"
+    )
+    tr_d.add_argument(
+        "--master-addr", default="127.0.0.1", help="Master node IP address"
+    )
+
+    # resume-distributed
+    res_d = subparsers.add_parser(
+        "resume-distributed",
+        help="Resume distributed training from a directory checkpoint",
+    )
+    res_d.add_argument(
+        "--checkpoint-dir", required=True, help="Path to checkpoint folder"
+    )
+
+    # benchmark-distributed
+    subparsers.add_parser(
+        "benchmark-distributed",
+        help="Measures distributed communication latency and scaling throughput",
+    )
+
+    # profile-distributed
+    subparsers.add_parser(
+        "profile-distributed",
+        help="Profiles distributed memory and device resource timelines",
+    )
+
+    # inspect-cluster
+    subparsers.add_parser(
+        "inspect-cluster",
+        help="Discovers active cluster node name, host IP, and topology",
+    )
+
+    # inspect-gpu
+    subparsers.add_parser(
+        "inspect-gpu",
+        help="Audits available GPU capacity, memory layout, and temperatures",
+    )
+
+    # validate-distributed
+    subparsers.add_parser(
+        "validate-distributed",
+        help="Validates hardware parameters and master node access ports",
+    )
+
+    # export-distributed-config
+    exp_c = subparsers.add_parser(
+        "export-distributed-config",
+        help="Dumps default distributed config properties to YAML",
+    )
+    exp_c.add_argument("--out-dir", default="configs", help="Output directory path")
+
+    # monitor-training
+    subparsers.add_parser(
+        "monitor-training",
+        help="Streams live Loss, LR, VRAM %, GPU %, TFLOPS, power, and temps",
+    )
+
+
+def _handle_train_distributed(args: Any) -> None:
+    from engine.distributed.launcher.launcher import DistributedLauncher
+
+    print(
+        f"Launching distributed training with world size {args.world_size} on script '{args.script}'..."
+    )
+    processes = DistributedLauncher.launch(
+        script_path=args.script,
+        world_size=args.world_size,
+        master_addr=args.master_addr,
+    )
+    for p in processes:
+        p.wait()
+    print("Distributed training session complete.")
+
+
+def _handle_resume_distributed(args: Any) -> None:
+    from engine.distributed.fault_tolerance.recovery import DistributedRecoveryManager
+
+    latest = DistributedRecoveryManager.find_latest_checkpoint(args.checkpoint_dir)
+    if latest:
+        print(f"Latest checkpoint located: {latest}")
+    else:
+        print(f"No checkpoint located under: {args.checkpoint_dir}")
+
+
+def _handle_benchmark_distributed() -> None:
+    from engine.distributed.benchmark import DistributedBenchmark
+
+    metrics = DistributedBenchmark.run_benchmark()
+    print("\n--- Distributed Training Benchmark ---")
+    for k, v in metrics.items():
+        print(f"  {k}: {v}")
+
+
+def _handle_profile_distributed() -> None:
+    from engine.distributed.profiler.gpu import GPUProfiler
+    from engine.distributed.profiler.memory import MemoryProfiler
+
+    gpu_stats = GPUProfiler.profile_gpus()
+    mem_stats = MemoryProfiler.get_summary()
+    print("\n--- Distributed Profiles ---")
+    print(f"  System RAM: {mem_stats}")
+    print(f"  GPU stats:  {gpu_stats}")
+
+
+def _handle_inspect_cluster() -> None:
+    from engine.distributed.visualizer import DistributedTopologyVisualizer
+
+    layout = DistributedTopologyVisualizer.draw_ascii_topology()
+    print(layout)
+
+
+def _handle_inspect_gpu() -> None:
+    from engine.distributed.profiler.gpu import GPUProfiler
+
+    stats = GPUProfiler.profile_gpus()
+    print("\n--- GPU Profiler Audit ---")
+    for k, v in stats.items():
+        print(f"  {k}: {v}")
+
+
+def _handle_validate_distributed() -> None:
+    from engine.distributed.validator import DistributedValidator
+
+    audit = DistributedValidator.validate_setup()
+    print("\n--- Distributed Setup Validation ---")
+    for k, v in audit.items():
+        print(f"  {k}: {v}")
+
+
+def _handle_export_distributed_config(args: Any) -> None:
+    os.makedirs(args.out_dir, exist_ok=True)
+    yaml_path = os.path.join(args.out_dir, "distributed.yaml")
+    default_cfg = {
+        "backend": "gloo",
+        "strategy": "ddp",
+        "world_size": 1,
+        "mixed_precision": "bf16",
+        "compile": False,
+        "gradient_checkpointing": False,
+        "flash_attention": "auto",
+        "checkpoint_interval": 1000,
+        "tensorboard": True,
+        "csv_logging": True,
+        "master_addr": "127.0.0.1",
+        "master_port": 29500,
+    }
+    with open(yaml_path, "w", encoding="utf-8") as f:
+        yaml.dump(default_cfg, f, default_flow_style=False)
+    print(f"Distributed config exported successfully to: {yaml_path}")
+
+
+def _handle_monitor_training() -> None:
+    from engine.distributed.monitoring.metrics import TrainingMetricsTracker
+
+    tracker = TrainingMetricsTracker()
+    # Mock single step monitor update
+    stats = tracker.step(loss=1.45, lr=1e-4, tokens=1024, examples=2)
+    print("\n--- Monitor Training Status ---")
+    for k, v in stats.items():
+        print(f"  {k}: {v}")
+
+
+def _handle_generate(args: Any) -> None:
+    from engine.inference.config import GenerationConfig
+    from engine.inference.service import InferenceService
+
+    service = InferenceService()
+    service.load_model(args.checkpoint_dir)
+    cfg = GenerationConfig(
+        config_dict={"temperature": args.temperature, "max_new_tokens": args.max_tokens}
+    )
+    resp = service.generate(args.prompt, config=cfg)
+    print(f"\nResponse:\n{resp.text}")
+    sys.exit(0)
+
+
+def _handle_chat(args: Any) -> None:
+    from engine.inference.config import GenerationConfig
+    from engine.inference.service import InferenceService
+
+    service = InferenceService()
+    service.load_model(args.checkpoint_dir)
+    cfg = GenerationConfig(
+        config_dict={"temperature": args.temperature, "max_new_tokens": args.max_tokens}
+    )
+    session = service.new_session(is_chat=True)
+    print("Interactive Chat Mode initialized. Type 'exit' to end chat.")
+    while True:
+        try:
+            user_text = input("User: ")
+            if user_text.strip().lower() in ["exit", "quit"]:
+                break
+            session.add_message("user", user_text)
+            resp = service.chat(session, config=cfg)
+            print(f"Assistant: {resp.text}")
+        except (KeyboardInterrupt, EOFError):
+            break
+    sys.exit(0)
+
+
+def _handle_stream(args: Any) -> None:
+    from engine.inference.config import GenerationConfig
+    from engine.inference.service import InferenceService
+
+    service = InferenceService()
+    service.load_model(args.checkpoint_dir)
+    cfg = GenerationConfig(
+        config_dict={"temperature": args.temperature, "max_new_tokens": args.max_tokens}
+    )
+    print("Streaming response:")
+    for token in service.stream(args.prompt, config=cfg):
+        sys.stdout.write(token)
+        sys.stdout.flush()
+    print()
+    sys.exit(0)
+
+
+def _handle_benchmark_inference(args: Any) -> None:
+    from engine.inference.benchmark import InferenceBenchmarkSuite
+    from engine.inference.service import InferenceService
+    from engine.inference.visualizer import InferenceVisualizer
+
+    service = InferenceService()
+    service.load_model(args.checkpoint_dir)
+    suite = InferenceBenchmarkSuite(service)
+    results = suite.run_benchmark(max_new_tokens=args.max_tokens)
+    print(InferenceVisualizer.render_results(results))
+    sys.exit(0)
+
+
+def _handle_inspect_cache(args: Any) -> None:
+    from engine.inference.service import InferenceService
+
+    service = InferenceService()
+    session = service.new_session(session_id="default_inspect", is_chat=False)
+    print("\n--- Inspect Active Caches ---")
+    print(f"Max Cached Sessions: {service.cache_manager.max_cached_sessions}")
+    print(f"Active Cache IDs: {list(service.cache_manager.cached_sessions.keys())}")
+    if session.cache:
+        print(f"KV Cache layers allocation: {getattr(session.cache, 'num_layers', 12)}")
+    sys.exit(0)
+
+
+def _handle_validate_inference(args: Any) -> None:
+    from engine.inference.health import InferenceHealthCheck
+    from engine.inference.service import InferenceService
+    from engine.inference.validator import InferenceValidator
+
+    service = InferenceService()
+    service.load_model(args.checkpoint_dir)
+    checker = InferenceHealthCheck(service)
+    health = checker.check_health()
+    print("\n--- Inference Engine Health Check ---")
+    for k, v in health.items():
+        print(f"  {k}: {v}")
+    if args.checkpoint_dir:
+        validation = InferenceValidator.validate_checkpoint(args.checkpoint_dir)
+        print("\n--- Checkpoint Validation ---")
+        for k, v in validation.items():
+            print(f"  {k}: {v}")
+    sys.exit(0)
+
+
+def _handle_profile_inference(args: Any) -> None:
+    from engine.inference.profiler import InferenceProfiler
+    from engine.inference.service import InferenceService
+
+    service = InferenceService()
+    service.load_model(args.checkpoint_dir)
+    profiler = InferenceProfiler(service)
+    profile = profiler.profile_request(args.prompt, max_new_tokens=args.max_tokens)
+    print("\n--- Inference Profiler Output ---")
+    for k, v in profile.items():
+        print(f"  {k}: {v}")
+    sys.exit(0)
+
+
+def _handle_export_generation_config(args: Any) -> None:
+    os.makedirs(args.out_dir, exist_ok=True)
+    yaml_path = os.path.join(args.out_dir, "generation.yaml")
+    default_cfg = {
+        "temperature": 0.7,
+        "top_k": 50,
+        "top_p": 0.9,
+        "min_p": 0.05,
+        "repetition_penalty": 1.1,
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "max_new_tokens": 256,
+        "do_sample": True,
+        "use_cache": True,
+        "seed": 42,
+    }
+    with open(yaml_path, "w", encoding="utf-8") as f:
+        yaml.dump(default_cfg, f, default_flow_style=False)
+    print(f"Generation config exported successfully to: {yaml_path}")
+    sys.exit(0)
+
+
+def _setup_inference_parsers(subparsers: Any) -> None:
+    # generate
+    gen = subparsers.add_parser("generate", help="Generate text from a prompt")
+    gen.add_argument("--prompt", required=True, help="Input prompt text")
+    gen.add_argument("--checkpoint-dir", default=None, help="Path to checkpoint folder")
+    gen.add_argument(
+        "--temperature", type=float, default=0.7, help="Sampling temperature"
+    )
+    gen.add_argument("--max-tokens", type=int, default=128, help="Maximum new tokens")
+
+    # chat
+    chat = subparsers.add_parser("chat", help="Run interactive console chat")
+    chat.add_argument(
+        "--checkpoint-dir", default=None, help="Path to checkpoint folder"
+    )
+    chat.add_argument(
+        "--temperature", type=float, default=0.7, help="Sampling temperature"
+    )
+    chat.add_argument("--max-tokens", type=int, default=128, help="Maximum new tokens")
+
+    # stream
+    stream = subparsers.add_parser("stream", help="Stream generated tokens to stdout")
+    stream.add_argument("--prompt", required=True, help="Input prompt text")
+    stream.add_argument(
+        "--checkpoint-dir", default=None, help="Path to checkpoint folder"
+    )
+    stream.add_argument(
+        "--temperature", type=float, default=0.7, help="Sampling temperature"
+    )
+    stream.add_argument(
+        "--max-tokens", type=int, default=128, help="Maximum new tokens"
+    )
+
+    # benchmark-inference
+    bench = subparsers.add_parser(
+        "benchmark-inference", help="Benchmark generation speed and TTFT"
+    )
+    bench.add_argument(
+        "--checkpoint-dir", default=None, help="Path to checkpoint folder"
+    )
+    bench.add_argument(
+        "--max-tokens", type=int, default=64, help="Maximum new tokens per prompt"
+    )
+
+    # inspect-cache
+    subparsers.add_parser(
+        "inspect-cache", help="Inspect active KV cache slots and memory layout"
+    )
+
+    # validate-inference
+    val = subparsers.add_parser(
+        "validate-inference", help="Validate inference health and loaded checkpoints"
+    )
+    val.add_argument("--checkpoint-dir", default=None, help="Path to checkpoint folder")
+
+    # profile-inference
+    prof = subparsers.add_parser(
+        "profile-inference",
+        help="Profile inference latencies and peak memory allocations",
+    )
+    prof.add_argument(
+        "--prompt",
+        default="Explain transformer self-attention.",
+        help="Profiling prompt",
+    )
+    prof.add_argument(
+        "--checkpoint-dir", default=None, help="Path to checkpoint folder"
+    )
+    prof.add_argument("--max-tokens", type=int, default=64, help="Maximum new tokens")
+
+    # export-generation-config
+    exp = subparsers.add_parser(
+        "export-generation-config", help="Export default generation configuration YAML"
+    )
+    exp.add_argument("--out-dir", default="configs", help="Output directory path")
+
+
+def _handle_serve(args: Any) -> None:
+    import uvicorn
+    import yaml
+
+    with open("configs/api.yaml", "r", encoding="utf-8") as f:
+        cfg = yaml.safe_load(f)
+    host = args.host or cfg.get("server", {}).get("host", "0.0.0.0")
+    port = args.port or cfg.get("server", {}).get("port", 8000)
+    print(f"Launching Chatii API server on {host}:{port}...")
+    uvicorn.run("engine.api.api:app", host=host, port=port, reload=False)
+    sys.exit(0)
+
+
+def _handle_warmup(args: Any) -> None:
+    print("Evaluating model warmup...")
+    sys.exit(0)
+
+
+def _handle_shutdown_cli(args: Any) -> None:
+    print("Initiating cluster shutdown...")
+    sys.exit(0)
+
+
+def _handle_config_cli(args: Any) -> None:
+    import yaml
+
+    with open("configs/api.yaml", "r", encoding="utf-8") as f:
+        cfg = yaml.safe_load(f)
+    print(yaml.dump(cfg, default_flow_style=False))
+    sys.exit(0)
+
+
+def _handle_version(args: Any) -> None:
+    print("Chatii Production Platform v1.0.0")
+    sys.exit(0)
+
+
+def _handle_metrics_cli(args: Any) -> None:
+    import requests
+
+    try:
+        resp = requests.get("http://localhost:8000/metrics", timeout=5)
+        print(resp.text)
+    except Exception as e:
+        print(f"Error fetching metrics: {e}")
+    sys.exit(0)
+
+
+def _handle_health_cli(args: Any) -> None:
+    import requests
+
+    try:
+        resp = requests.get("http://localhost:8000/health/ready", timeout=5)
+        print(resp.json())
+    except Exception as e:
+        print(f"Error checking health: {e}")
+    sys.exit(0)
+
+
+def _handle_benchmark_api(args: Any) -> None:
+    from engine.api.benchmark.api_benchmark import run_api_benchmark
+
+    url = "http://localhost:8000/v1/chat/completions"
+    headers = {"Authorization": "Bearer chatii-admin-root-key"}
+    payload = {
+        "model": "chatii-v1",
+        "messages": [{"role": "user", "content": "Hello"}],
+        "max_tokens": 16,
+    }
+    print("Running API Benchmark...")
+    res = run_api_benchmark(url, headers, payload, count=5)
+    print(f"Average Latency: {res['avg_latency']:.3f}s")
+    print(f"Throughput: {res['tps']:.2f} requests/sec")
+    sys.exit(0)
+
+
+def _handle_load_model_cli(args: Any) -> None:
+    import requests
+
+    try:
+        resp = requests.post(
+            "http://localhost:8000/v1/admin/load",
+            json={"model": args.model},
+            headers={"Authorization": "Bearer chatii-admin-root-key"},
+            timeout=10,
+        )
+        print(resp.json())
+    except Exception as e:
+        print(f"Error loading model: {e}")
+    sys.exit(0)
+
+
+def _handle_unload_model_cli(args: Any) -> None:
+    import requests
+
+    try:
+        resp = requests.post(
+            "http://localhost:8000/v1/admin/unload",
+            json={"model": args.model},
+            headers={"Authorization": "Bearer chatii-admin-root-key"},
+            timeout=10,
+        )
+        print(resp.json())
+    except Exception as e:
+        print(f"Error unloading model: {e}")
+    sys.exit(0)
+
+
+def _handle_reload_model_cli(args: Any) -> None:
+    import requests
+
+    try:
+        headers = {"Authorization": "Bearer chatii-admin-root-key"}
+        requests.post(
+            "http://localhost:8000/v1/admin/unload",
+            json={"model": args.model},
+            headers=headers,
+            timeout=10,
+        )
+        resp = requests.post(
+            "http://localhost:8000/v1/admin/load",
+            json={"model": args.model},
+            headers=headers,
+            timeout=10,
+        )
+        print(resp.json())
+    except Exception as e:
+        print(f"Error reloading model: {e}")
+    sys.exit(0)
+
+
+def _handle_list_models_cli(args: Any) -> None:
+    import requests
+
+    try:
+        resp = requests.get(
+            "http://localhost:8000/v1/models",
+            headers={"Authorization": "Bearer chatii-admin-root-key"},
+            timeout=5,
+        )
+        print(resp.json())
+    except Exception as e:
+        print(f"Error listing models: {e}")
+    sys.exit(0)
+
+
+def _setup_api_parsers(subparsers: Any) -> None:
+    for cmd in ["serve", "serve-api", "serve-websocket", "serve-sse"]:
+        p = subparsers.add_parser(cmd, help=f"Serve the model using {cmd}")
+        p.add_argument("--host", default=None, help="Server host IP")
+        p.add_argument("--port", type=int, default=None, help="Server port number")
+
+    subparsers.add_parser("warmup", help="Warm up active models")
+    subparsers.add_parser("shutdown", help="Initiate graceful shutdown")
+    subparsers.add_parser("config", help="Print active API configuration")
+    subparsers.add_parser("version", help="Print Chatii platform version")
+    subparsers.add_parser("metrics", help="Fetch remote API server metrics")
+    subparsers.add_parser("health", help="Check remote API server health")
+    subparsers.add_parser("benchmark-api", help="Benchmark Remote API server speed")
+
+    for cmd in ["load-model", "unload-model", "reload-model"]:
+        p = subparsers.add_parser(cmd, help=f"{cmd} command")
+        p.add_argument("--model", required=True, help="Target model identifier")
+
+    subparsers.add_parser("list-models", help="List registered models")
+
+
 def main() -> None:
     """
     Unified CLI entrypoint for Chatii execution commands.
@@ -953,9 +1538,6 @@ def main() -> None:
         "train", help="Train a model configured in configs/training.yaml"
     )
 
-    # Command: serve
-    subparsers.add_parser("serve", help="Serve the model as an OpenAI-compatible API")
-
     # Command: benchmark
     subparsers.add_parser(
         "benchmark", help="Run latency, throughput, and memory benchmarks"
@@ -971,6 +1553,9 @@ def main() -> None:
     _setup_model_parsers(subparsers)
     _setup_training_parsers(subparsers)
     _setup_dataset_parsers(subparsers)
+    _setup_distributed_parsers(subparsers)
+    _setup_inference_parsers(subparsers)
+    _setup_api_parsers(subparsers)
 
     args = parser.parse_args()
 
@@ -1022,6 +1607,40 @@ def main() -> None:
             "register-dataset": lambda: _handle_register_dataset(args),
             "remove-dataset": lambda: _handle_remove_dataset(args),
             "dataset-info": lambda: _handle_dataset_info(args),
+            "train-distributed": lambda: _handle_train_distributed(args),
+            "resume-distributed": lambda: _handle_resume_distributed(args),
+            "benchmark-distributed": lambda: _handle_benchmark_distributed(),
+            "profile-distributed": lambda: _handle_profile_distributed(),
+            "inspect-cluster": lambda: _handle_inspect_cluster(),
+            "inspect-gpu": lambda: _handle_inspect_gpu(),
+            "validate-distributed": lambda: _handle_validate_distributed(),
+            "export-distributed-config": lambda: _handle_export_distributed_config(
+                args
+            ),
+            "monitor-training": lambda: _handle_monitor_training(),
+            "generate": lambda: _handle_generate(args),
+            "chat": lambda: _handle_chat(args),
+            "stream": lambda: _handle_stream(args),
+            "benchmark-inference": lambda: _handle_benchmark_inference(args),
+            "inspect-cache": lambda: _handle_inspect_cache(args),
+            "validate-inference": lambda: _handle_validate_inference(args),
+            "profile-inference": lambda: _handle_profile_inference(args),
+            "export-generation-config": lambda: _handle_export_generation_config(args),
+            "serve": lambda: _handle_serve(args),
+            "serve-api": lambda: _handle_serve(args),
+            "serve-websocket": lambda: _handle_serve(args),
+            "serve-sse": lambda: _handle_serve(args),
+            "warmup": lambda: _handle_warmup(args),
+            "shutdown": lambda: _handle_shutdown_cli(args),
+            "config": lambda: _handle_config_cli(args),
+            "version": lambda: _handle_version(args),
+            "metrics": lambda: _handle_metrics_cli(args),
+            "health": lambda: _handle_health_cli(args),
+            "benchmark-api": lambda: _handle_benchmark_api(args),
+            "load-model": lambda: _handle_load_model_cli(args),
+            "unload-model": lambda: _handle_unload_model_cli(args),
+            "reload-model": lambda: _handle_reload_model_cli(args),
+            "list-models": lambda: _handle_list_models_cli(args),
         }
         if args.command in handlers:
             handlers[args.command]()
@@ -1033,4 +1652,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

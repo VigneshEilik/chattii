@@ -33,15 +33,19 @@ class JsonLoader(BaseLoader):
                         text = item
                     elif isinstance(item, dict):
                         text = item.get("text", item.get("content", str(item)))
-                        meta.update({k: v for k, v in item.items() if k not in ("text", "content")})
+                        meta.update(
+                            {
+                                k: v
+                                for k, v in item.items()
+                                if k not in ("text", "content")
+                            }
+                        )
                     else:
                         text = str(item)
 
                     if text:
                         yield TextSample(
-                            text=text,
-                            sample_id=f"json_{idx}",
-                            metadata=meta
+                            text=text, sample_id=f"json_{idx}", metadata=meta
                         )
             elif isinstance(data, dict):
                 # If it's a dict, check for list values (e.g. {"data": [...]})
@@ -54,7 +58,13 @@ class JsonLoader(BaseLoader):
                                 text = item
                             elif isinstance(item, dict):
                                 text = item.get("text", item.get("content", str(item)))
-                                meta.update({kk: vv for kk, vv in item.items() if kk not in ("text", "content")})
+                                meta.update(
+                                    {
+                                        kk: vv
+                                        for kk, vv in item.items()
+                                        if kk not in ("text", "content")
+                                    }
+                                )
                             else:
                                 text = str(item)
 
@@ -62,12 +72,10 @@ class JsonLoader(BaseLoader):
                                 yield TextSample(
                                     text=text,
                                     sample_id=f"json_{k}_{idx}",
-                                    metadata=meta
+                                    metadata=meta,
                                 )
                         break
             else:
                 yield TextSample(
-                    text=str(data),
-                    sample_id="json_0",
-                    metadata={"source": self.path}
+                    text=str(data), sample_id="json_0", metadata={"source": self.path}
                 )

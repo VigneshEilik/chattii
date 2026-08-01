@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatii-config
+  namespace: chatii
+data:
+  ENV: "production"
+  DEFAULT_MODEL: "chatii-v1"

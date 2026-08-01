@@ -6,7 +6,9 @@ from typing import Any, Iterator
 class PrefetchBuffer:
     """Asynchronously prefetches training batches in a background thread to prevent GPU starvation."""
 
-    def __init__(self, dataloader_iterator: Iterator[Any], buffer_size: int = 4) -> None:
+    def __init__(
+        self, dataloader_iterator: Iterator[Any], buffer_size: int = 4
+    ) -> None:
         self.dataloader_iterator = dataloader_iterator
         self.queue: queue.Queue = queue.Queue(maxsize=buffer_size)
         self.stop_event = threading.Event()

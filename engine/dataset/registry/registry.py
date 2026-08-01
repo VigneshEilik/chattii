@@ -27,7 +27,7 @@ class DatasetRegistry:
                     "version": "v1",
                     "path": "datasets/demo/tiny.txt",
                     "format": "txt",
-                    "language": "en"
+                    "language": "en",
                 }
             }
             self.save()

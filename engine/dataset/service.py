@@ -25,14 +25,24 @@ class DatasetService:
         self.config = config or DatasetPipelineConfig.load_from_yaml()
         self.registry = DatasetRegistry()
 
-    def register_dataset(self, name: str, path: str, fmt: str = "txt", language: str = "en", version: str = "v1") -> None:
-        self.registry.register(name, {
-            "name": name,
-            "version": version,
-            "path": path,
-            "format": fmt,
-            "language": language,
-        })
+    def register_dataset(
+        self,
+        name: str,
+        path: str,
+        fmt: str = "txt",
+        language: str = "en",
+        version: str = "v1",
+    ) -> None:
+        self.registry.register(
+            name,
+            {
+                "name": name,
+                "version": version,
+                "path": path,
+                "format": fmt,
+                "language": language,
+            },
+        )
         print(f"Dataset '{name}' registered successfully.")
 
     def remove_dataset(self, name: str) -> None:
@@ -48,7 +58,9 @@ class DatasetService:
             return
         print("\n--- Registered Datasets ---")
         for ds in datasets:
-            print(f"  {ds.get('name', 'unknown')} (v{ds.get('version', '?')}) [{ds.get('format', '?')}] -> {ds.get('path', '?')}")
+            print(
+                f"  {ds.get('name', 'unknown')} (v{ds.get('version', '?')}) [{ds.get('format', '?')}] -> {ds.get('path', '?')}"
+            )
 
     def dataset_info(self, name: str) -> None:
         entry = self.registry.get(name)
@@ -83,15 +95,24 @@ class DatasetService:
             loader_type=entry.get("format", "txt"),
         )
         loader = DatasetFactory.create_loader(config)
-        cleaners = [UnicodeCleaner(), HTMLCleaner(), ControlCharacterCleaner(), WhitespaceCleaner()]
+        cleaners = [
+            UnicodeCleaner(),
+            HTMLCleaner(),
+            ControlCharacterCleaner(),
+            WhitespaceCleaner(),
+        ]
         validators = [EncodingValidator(), CorruptionValidator(), QualityValidator()]
-        pipeline = StreamingPipeline(loader=loader, cleaners=cleaners, validators=validators)
+        pipeline = StreamingPipeline(
+            loader=loader, cleaners=cleaners, validators=validators
+        )
 
         count = 0
         for _ in pipeline:
             count += 1
 
-        print(f"\nDataset '{name}' prepared successfully. {count} samples passed all filters.")
+        print(
+            f"\nDataset '{name}' prepared successfully. {count} samples passed all filters."
+        )
 
     def stream(self, name: str) -> None:
         entry = self.registry.get(name)
@@ -112,7 +133,9 @@ class DatasetService:
         for sample in pipeline:
             count += 1
             if count <= 5:
-                preview = sample.text[:80] + "..." if len(sample.text) > 80 else sample.text
+                preview = (
+                    sample.text[:80] + "..." if len(sample.text) > 80 else sample.text
+                )
                 print(f"  [{sample.sample_id}] {preview}")
 
         print(f"\n  ... Streamed {count} samples total.")

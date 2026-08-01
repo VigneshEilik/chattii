@@ -8,7 +8,10 @@ class SequencePacker(BasePacker):
     """Packs variable-length token sequences into fixed-length context windows with EOS boundaries."""
 
     def __init__(
-        self, max_sequence_length: int = 2048, add_eos: bool = True, eos_token_id: int = 2
+        self,
+        max_sequence_length: int = 2048,
+        add_eos: bool = True,
+        eos_token_id: int = 2,
     ) -> None:
         self.max_sequence_length = max_sequence_length
         self.add_eos = add_eos
@@ -25,8 +28,8 @@ class SequencePacker(BasePacker):
 
             buffer.extend(ids)
             while len(buffer) >= self.max_sequence_length:
-                chunk = buffer[:self.max_sequence_length]
-                buffer = buffer[self.max_sequence_length:]
+                chunk = buffer[: self.max_sequence_length]
+                buffer = buffer[self.max_sequence_length :]
 
                 yield TokenizedSample(
                     input_ids=chunk,

@@ -36,7 +36,9 @@ class DatasetPipelineConfig:
     extra: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
-    def load_from_yaml(cls, yaml_path: str = "configs/dataset.yaml") -> "DatasetPipelineConfig":
+    def load_from_yaml(
+        cls, yaml_path: str = "configs/dataset.yaml"
+    ) -> "DatasetPipelineConfig":
         if not os.path.exists(yaml_path):
             return cls()
         with open(yaml_path, "r", encoding="utf-8") as f:

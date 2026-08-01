@@ -9,7 +9,9 @@ from engine.dataset.base.dataset import TokenizedSample
 class BinaryDatasetWriter:
     """Serializes streams of token IDs to sharded binary files for high-speed loading."""
 
-    def __init__(self, out_dir: str, prefix: str = "dataset", dtype: str = "uint16") -> None:
+    def __init__(
+        self, out_dir: str, prefix: str = "dataset", dtype: str = "uint16"
+    ) -> None:
         self.out_dir = out_dir
         self.prefix = prefix
         self.dtype = np.dtype(dtype)

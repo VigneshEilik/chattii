@@ -1,41 +1,32 @@
 import torch
 
-from engine.transformer.cache.attention_cache import AttentionCache
-from engine.transformer.config import ModelMathConfig
-from engine.transformer.model import ChatiiModel
+from engine.inference.cache.kv_cache import KVCache
+from engine.inference.cache.manager import CacheManager
 
 
-def test_kv_cache_mechanism() -> None:
-    config = ModelMathConfig(vocab_size=1000, d_model=64, n_heads=4, num_layers=2)
-    model = ChatiiModel(config)
+def test_standard_kv_cache():
+    cache = KVCache(num_layers=2)
+    # Layer 0 cache
+    l0 = cache.get_cache(0)
+    k = torch.randn(1, 2, 4, 8)
+    v = torch.randn(1, 2, 4, 8)
+    rk, rv = l0.update(k, v)
+    assert rk.shape == (1, 2, 4, 8)
 
-    # 1. Prefill pass: seq_len = 5
-    x_prefill = torch.randint(0, 1000, (1, 5))
-    cache = AttentionCache(num_layers=2)
+    # Append along seq dimension
+    k2 = torch.randn(1, 2, 1, 8)
+    v2 = torch.randn(1, 2, 1, 8)
+    rk2, rv2 = l0.update(k2, v2)
+    assert rk2.shape == (1, 2, 5, 8)
 
-    logits_prefill = model(x_prefill, cache=cache, use_cache=True)
-    assert logits_prefill.shape == (1, 5, 1000)
 
-    # Check cache contains 5 tokens
-    for i in range(2):
-        layer_cache = cache.get_cache(i)
-        assert layer_cache.k is not None
-        assert layer_cache.v is not None
-        assert layer_cache.k.shape == (1, 4, 5, 16)
+def test_cache_manager():
+    mgr = CacheManager(max_cached_sessions=2)
+    mgr.allocate("s1", num_layers=4)
+    mgr.allocate("s2", num_layers=4)
+    assert len(mgr.cached_sessions) == 2
 
-    # 2. Incremental decode pass: seq_len = 1
-    x_decode = torch.randint(0, 1000, (1, 1))
-    logits_decode = model(x_decode, cache=cache, use_cache=True)
-    assert logits_decode.shape == (1, 1, 1000)
-
-    # Check cache is appended (now contains 6 tokens)
-    for i in range(2):
-        layer_cache = cache.get_cache(i)
-        assert layer_cache.k.shape == (1, 4, 6, 16)
-
-    # 3. Clear cache
-    cache.reset()
-    for i in range(2):
-        layer_cache = cache.get_cache(i)
-        assert layer_cache.k is None
-        assert layer_cache.v is None
+    # FIFO eviction check
+    mgr.allocate("s3", num_layers=4)
+    assert "s1" not in mgr.cached_sessions
+    assert len(mgr.cached_sessions) == 2

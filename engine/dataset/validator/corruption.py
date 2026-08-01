@@ -11,7 +11,10 @@ class CorruptionValidator(BaseValidator):
         if sample.text is None:
             return False, "Null sample payload"
         if not isinstance(sample.text, str):
-            return False, f"Invalid type: expected string, got {type(sample.text).__name__}"
+            return (
+                False,
+                f"Invalid type: expected string, got {type(sample.text).__name__}",
+            )
         if not sample.text.strip():
             return False, "Empty or white-space-only sample"
         return True, ""

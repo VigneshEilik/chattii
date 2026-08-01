@@ -1,0 +1,18 @@
+FROM pytorch/pytorch:2.1.0-cuda12.1-cudnn8-runtime
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt pyproject.toml /app/
+RUN pip install --no-cache-dir -e .
+
+COPY . /app
+
+EXPOSE 8000
+
+ENV TORCH_CUDA_ARCH_LIST="8.0;8.6;8.9;9.0"
+
+ENTRYPOINT ["python", "cli/main.py", "serve"]

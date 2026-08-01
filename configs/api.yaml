@@ -1,16 +1,50 @@
-# API Server configuration parameters
-host: "0.0.0.0"
-port: 8000
-debug: false
-workers: 1
+server:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 1
+  timeout: 60
 
-# Security and Limits
-api_key_header: "X-API-Key"
-rate_limit:
-  enabled: true
-  requests_per_minute: 60
+auth:
+  jwt:
+    secret_key: "chatii-production-secret-key-change-in-production"
+    algorithm: "HS256"
+    access_token_expire_minutes: 60
+  api_keys:
+    - "chatii-admin-root-key"
+    - "chatii-development-test-key"
 
-# Model In-Memory serving configs
-max_batch_size: 8
-timeout_seconds: 5.0
-enable_streaming: true
+cors:
+  allow_origins:
+    - "*"
+  allow_methods:
+    - "*"
+  allow_headers:
+    - "*"
+
+models:
+  default_model: "chatii-v1"
+  model_aliases:
+    "latest": "chatii-v1"
+
+streaming:
+  sse: true
+  websocket: true
+
+scheduler:
+  type: "priority"
+
+monitoring:
+  prometheus: true
+  opentelemetry: false
+
+logging:
+  level: "INFO"
+  json_format: true
+
+limits:
+  max_batch_size: 16
+  max_prompt_length: 2048
+  max_new_tokens: 512
+  rate_limit:
+    requests_per_minute: 60
+    burst: 10

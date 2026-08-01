@@ -8,7 +8,9 @@ from engine.dataset.base.validator import BaseValidator
 class DuplicateValidator(BaseValidator):
     """Detects exact duplicates via SHA-256 and near-duplicates using a MinHash signature skeleton."""
 
-    def __init__(self, exact: bool = True, near_dup: bool = True, threshold: float = 0.85) -> None:
+    def __init__(
+        self, exact: bool = True, near_dup: bool = True, threshold: float = 0.85
+    ) -> None:
         self.exact = exact
         self.near_dup = near_dup
         self.threshold = threshold
@@ -19,9 +21,11 @@ class DuplicateValidator(BaseValidator):
         words = text.lower().split()
         if len(words) < k:
             return {tuple(words)}
-        return {tuple(words[i:i+k]) for i in range(len(words) - k + 1)}
+        return {tuple(words[i : i + k]) for i in range(len(words) - k + 1)}
 
-    def _minhash_signature(self, shingles: Set[Tuple[str, ...]], num_hashes: int = 16) -> List[int]:
+    def _minhash_signature(
+        self, shingles: Set[Tuple[str, ...]], num_hashes: int = 16
+    ) -> List[int]:
         sig = []
         for i in range(num_hashes):
             min_val = 0xFFFFFFFFFFFFFFFF
@@ -29,8 +33,7 @@ class DuplicateValidator(BaseValidator):
                 shingle_str = "".join(shingle)
                 # Compute md5 shingle hash with a unique seed
                 h_val = int(
-                    hashlib.md5(f"{shingle_str}_{i}".encode("utf-8")).hexdigest(),
-                    16
+                    hashlib.md5(f"{shingle_str}_{i}".encode("utf-8")).hexdigest(), 16
                 )
                 if h_val < min_val:
                     min_val = h_val
@@ -58,7 +61,10 @@ class DuplicateValidator(BaseValidator):
                 matches = sum(1 for a, b in zip(sig, existing_sig) if a == b)
                 similarity = matches / len(sig)
                 if similarity >= self.threshold:
-                    return False, f"Near duplicate found (Jaccard similarity: {similarity:.2%})"
+                    return (
+                        False,
+                        f"Near duplicate found (Jaccard similarity: {similarity:.2%})",
+                    )
             self.seen_signatures.append(sig)
 
         return True, ""

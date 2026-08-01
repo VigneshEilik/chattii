@@ -13,11 +13,11 @@ class TruncationHandler:
         labels = sample.labels
 
         if len(ids) > self.max_length:
-            ids = ids[:self.max_length]
+            ids = ids[: self.max_length]
             if mask is not None:
-                mask = mask[:self.max_length]
+                mask = mask[: self.max_length]
             if labels is not None:
-                labels = labels[:self.max_length]
+                labels = labels[: self.max_length]
 
         return TokenizedSample(
             input_ids=ids,

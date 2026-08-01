@@ -47,7 +47,9 @@ class DatasetBenchmark:
 
         # 3. Benchmark streaming pipeline speed
         loader3 = DatasetFactory.create_loader(config)
-        streaming = StreamingPipeline(loader=loader3, cleaners=[UnicodeCleaner(), WhitespaceCleaner()])
+        streaming = StreamingPipeline(
+            loader=loader3, cleaners=[UnicodeCleaner(), WhitespaceCleaner()]
+        )
         start = time.perf_counter()
         stream_count = 0
         for _ in streaming:

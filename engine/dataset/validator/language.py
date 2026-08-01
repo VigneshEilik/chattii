@@ -17,6 +17,7 @@ class LanguageValidator(BaseValidator):
         try:
             # Try to use langdetect if installed
             from langdetect import detect
+
             lang = detect(sample.text)
             if lang == self.target_lang:
                 return True, ""
@@ -27,5 +28,8 @@ class LanguageValidator(BaseValidator):
                 non_ascii = sum(1 for c in sample.text if ord(c) > 127)
                 ratio = non_ascii / max(1, len(sample.text))
                 if ratio > 0.35:
-                    return False, f"High non-ASCII ratio ({ratio:.2%}) for English target"
+                    return (
+                        False,
+                        f"High non-ASCII ratio ({ratio:.2%}) for English target",
+                    )
             return True, ""

@@ -10,7 +10,8 @@ class ControlCharacterCleaner(BaseCleaner):
     def clean(self, sample: TextSample) -> TextSample:
         # Preserve newlines and tabs, strip other control characters ('Cc' category)
         cleaned = "".join(
-            c for c in sample.text
+            c
+            for c in sample.text
             if unicodedata.category(c) != "Cc" or c in ("\n", "\t")
         )
         return TextSample(

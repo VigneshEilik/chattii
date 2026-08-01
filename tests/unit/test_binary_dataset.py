@@ -1,10 +1,12 @@
 import os
 import tempfile
+
 import numpy as np
+
 from engine.dataset.base.dataset import TokenizedSample
-from engine.dataset.binary.writer import BinaryDatasetWriter
-from engine.dataset.binary.reader import BinaryDatasetReader
 from engine.dataset.binary.mmap import MemoryMappedDataset
+from engine.dataset.binary.reader import BinaryDatasetReader
+from engine.dataset.binary.writer import BinaryDatasetWriter
 
 
 def test_binary_writer_and_reader() -> None:
@@ -14,7 +16,9 @@ def test_binary_writer_and_reader() -> None:
     ]
 
     with tempfile.TemporaryDirectory() as temp_dir:
-        writer = BinaryDatasetWriter(out_dir=temp_dir, prefix="test_bin", dtype="uint16")
+        writer = BinaryDatasetWriter(
+            out_dir=temp_dir, prefix="test_bin", dtype="uint16"
+        )
         # Split into shards of 4 tokens
         shard_paths = writer.write(iter(samples), tokens_per_shard=4)
 

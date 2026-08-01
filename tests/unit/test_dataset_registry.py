@@ -1,8 +1,9 @@
 import os
 import tempfile
-from engine.dataset.registry.registry import DatasetRegistry
-from engine.dataset.registry.factory import DatasetFactory
+
 from engine.dataset.config import DatasetPipelineConfig
+from engine.dataset.registry.factory import DatasetFactory
+from engine.dataset.registry.registry import DatasetRegistry
 
 
 def test_dataset_registry() -> None:

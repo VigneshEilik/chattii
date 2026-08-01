@@ -48,7 +48,9 @@ class ShardIndexGenerator:
         return index_data
 
     @classmethod
-    def save_index(cls, shard_paths: List[str], output_path: str, dtype_size: int = 2) -> None:
+    def save_index(
+        cls, shard_paths: List[str], output_path: str, dtype_size: int = 2
+    ) -> None:
         index_data = cls.generate_index(shard_paths, dtype_size=dtype_size)
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(index_data, f, indent=2)

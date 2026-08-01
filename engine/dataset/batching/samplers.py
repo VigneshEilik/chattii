@@ -43,7 +43,9 @@ class RandomSampler(Sampler):
 class WeightedSampler(Sampler):
     """Samples dataset indices with proportional probabilities."""
 
-    def __init__(self, weights: List[float], num_samples: int, replacement: bool = True) -> None:
+    def __init__(
+        self, weights: List[float], num_samples: int, replacement: bool = True
+    ) -> None:
         self.weights = weights
         self.num_samples = num_samples
         self.replacement = replacement
@@ -95,7 +97,9 @@ class DistributedSampler(Sampler):
 class TemperatureSampler(Sampler):
     """Applies temperature scaling to sample probabilities (useful for mixing multi-domain text datasets)."""
 
-    def __init__(self, weights: List[float], num_samples: int, temperature: float = 1.0) -> None:
+    def __init__(
+        self, weights: List[float], num_samples: int, temperature: float = 1.0
+    ) -> None:
         self.weights = weights
         self.num_samples = num_samples
         self.temperature = temperature

@@ -7,7 +7,9 @@ from engine.dataset.binary.mmap import MemoryMappedDataset
 class BinaryDatasetReader:
     """Reads sequences of fixed block sizes from a MemoryMappedDataset and yields TokenizedSamples."""
 
-    def __init__(self, mmap_dataset: MemoryMappedDataset, block_size: int = 2048) -> None:
+    def __init__(
+        self, mmap_dataset: MemoryMappedDataset, block_size: int = 2048
+    ) -> None:
         self.mmap_dataset = mmap_dataset
         self.block_size = block_size
 

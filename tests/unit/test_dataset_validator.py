@@ -1,8 +1,8 @@
 from engine.dataset.base.dataset import TextSample
-from engine.dataset.validator.language import LanguageValidator
-from engine.dataset.validator.encoding import EncodingValidator
-from engine.dataset.validator.duplicates import DuplicateValidator
 from engine.dataset.validator.corruption import CorruptionValidator
+from engine.dataset.validator.duplicates import DuplicateValidator
+from engine.dataset.validator.encoding import EncodingValidator
+from engine.dataset.validator.language import LanguageValidator
 from engine.dataset.validator.quality import QualityValidator
 
 
@@ -12,7 +12,9 @@ def test_language_validator() -> None:
     assert valid
 
     # Heuristic non-ASCII check for English
-    invalid, reason = validator.validate(TextSample("Это русский текст, он не должен пройти проверку."))
+    invalid, reason = validator.validate(
+        TextSample("Это русский текст, он не должен пройти проверку.")
+    )
     assert not invalid
     assert "non-ASCII" in reason
 

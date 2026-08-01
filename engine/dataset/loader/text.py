@@ -22,5 +22,5 @@ class TextLoader(BaseLoader):
                     yield TextSample(
                         text=cleaned,
                         sample_id=f"txt_{idx}",
-                        metadata={"line_number": idx, "source": self.path}
+                        metadata={"line_number": idx, "source": self.path},
                     )

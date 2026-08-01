@@ -15,23 +15,25 @@ import tempfile
 # Ensure project root is on sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from engine.dataset.service import DatasetService  # noqa: E402
 from engine.dataset.base.dataset import TextSample, TokenizedSample  # noqa: E402
-from engine.dataset.cleaner.pipeline import CleaningPipeline  # noqa: E402
-from engine.dataset.cleaner.whitespace import WhitespaceCleaner  # noqa: E402
-from engine.dataset.cleaner.unicode import UnicodeCleaner  # noqa: E402
+from engine.dataset.binary.mmap import MemoryMappedDataset  # noqa: E402
+from engine.dataset.binary.reader import BinaryDatasetReader  # noqa: E402
+from engine.dataset.binary.writer import BinaryDatasetWriter  # noqa: E402
+from engine.dataset.cache.fingerprint import DatasetFingerprint  # noqa: E402
 from engine.dataset.cleaner.html import HTMLCleaner  # noqa: E402
-from engine.dataset.validator.quality import QualityValidator  # noqa: E402
+from engine.dataset.cleaner.pipeline import CleaningPipeline  # noqa: E402
+from engine.dataset.cleaner.unicode import UnicodeCleaner  # noqa: E402
+from engine.dataset.cleaner.whitespace import WhitespaceCleaner  # noqa: E402
+from engine.dataset.packing.metrics import PackingMetricsCalculator  # noqa: E402
 from engine.dataset.packing.packer import SequencePacker  # noqa: E402
 from engine.dataset.packing.padding import PaddingHandler  # noqa: E402
 from engine.dataset.packing.truncation import TruncationHandler  # noqa: E402
-from engine.dataset.packing.metrics import PackingMetricsCalculator  # noqa: E402
-from engine.dataset.binary.writer import BinaryDatasetWriter  # noqa: E402
-from engine.dataset.binary.reader import BinaryDatasetReader  # noqa: E402
-from engine.dataset.binary.mmap import MemoryMappedDataset  # noqa: E402
-from engine.dataset.statistics.calculator import DatasetStatisticsCalculator  # noqa: E402
 from engine.dataset.reports.report_generator import DatasetReportGenerator  # noqa: E402
-from engine.dataset.cache.fingerprint import DatasetFingerprint  # noqa: E402
+from engine.dataset.service import DatasetService  # noqa: E402
+from engine.dataset.statistics.calculator import (
+    DatasetStatisticsCalculator,  # noqa: E402
+)
+from engine.dataset.validator.quality import QualityValidator  # noqa: E402
 
 
 def main() -> None:
@@ -138,7 +140,10 @@ def main() -> None:
     calc = DatasetStatisticsCalculator()
     demo_samples = [
         (TextSample("Hello world"), TokenizedSample(input_ids=[10, 20, 2])),
-        (TextSample("Large language model training"), TokenizedSample(input_ids=[5, 6, 7, 8, 2])),
+        (
+            TextSample("Large language model training"),
+            TokenizedSample(input_ids=[5, 6, 7, 8, 2]),
+        ),
     ]
     for ts, tok in demo_samples:
         calc.add_sample(ts, tok)

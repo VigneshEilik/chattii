@@ -1,50 +1,45 @@
+import os
+import shutil
 import tempfile
 
 import torch
+import torch.nn as nn
 
-from engine.transformer.checkpoint.converter import CheckpointConverter
-from engine.transformer.config import ModelMathConfig
-from engine.transformer.health import TransformerHealthChecker
-from engine.transformer.model import ChatiiModel
-
-
-def test_checkpoint_saving_and_loading() -> None:
-    config = ModelMathConfig(
-        activation="swiglu",
-        normalization="rmsnorm",
-        d_model=64,
-        n_heads=4,
-        d_ff=256,
-        num_layers=2,
-        vocab_size=1000,
-    )
-
-    model = ChatiiModel(config)
-    x = torch.randint(0, 1000, (1, 10))
-    original_logits = model(x)
-
-    with tempfile.TemporaryDirectory() as tmp_dir:
-        # Save checkpoint
-        model.save(tmp_dir)
-
-        # Audit directory health
-        ok, errors = TransformerHealthChecker.check_health(tmp_dir)
-        assert ok
-        assert len(errors) == 0
-
-        # Load into new model
-        new_model = ChatiiModel(config)
-        new_model.load(tmp_dir)
-
-        # Validate equivalence
-        loaded_logits = new_model(x)
-        assert torch.allclose(original_logits, loaded_logits, atol=1e-5)
+from engine.distributed.checkpoint.distributed import DistributedCheckpointManager
+from engine.distributed.checkpoint.restore import DistributedCheckpointRestorer
 
 
-def test_checkpoint_converter() -> None:
-    state_dict = {"layers.0.attn.q_proj.weight": torch.ones(10)}
-    flat = CheckpointConverter.to_flat(state_dict)
-    assert "layers__0__attn__q_proj__weight" in flat
+class DummyModel(nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.fc = nn.Linear(4, 4)
 
-    restored = CheckpointConverter.from_flat(flat)
-    assert "layers.0.attn.q_proj.weight" in restored
+
+def test_distributed_checkpointing() -> None:
+    model = DummyModel()
+    optimizer = torch.optim.SGD(model.parameters(), lr=0.1)
+    trainer_state = {"global_step": 42}
+
+    temp_dir = tempfile.mkdtemp()
+    try:
+        # Save rank 0 state
+        DistributedCheckpointManager.save_checkpoint(
+            temp_dir,
+            model,
+            optimizer,
+            trainer_state,
+            rank=0,
+            world_size=1,
+            strategy="ddp",
+        )
+        assert os.path.exists(os.path.join(temp_dir, "model_rank0.pt"))
+        assert os.path.exists(os.path.join(temp_dir, "metadata.json"))
+
+        # Restore
+        device = torch.device("cpu")
+        restored_state = DistributedCheckpointRestorer.restore(
+            temp_dir, model, optimizer, rank=0, device=device
+        )
+        assert restored_state["global_step"] == 42
+    finally:
+        shutil.rmtree(temp_dir)

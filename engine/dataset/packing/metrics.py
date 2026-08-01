@@ -20,7 +20,9 @@ class PackingMetricsCalculator:
         valid_tokens = 0
         for sample in packed_samples:
             if sample.labels is not None:
-                valid_tokens += sum(1 for label in sample.labels if label != ignore_index)
+                valid_tokens += sum(
+                    1 for label in sample.labels if label != ignore_index
+                )
             else:
                 valid_tokens += len(sample.input_ids)
 

@@ -1,9 +1,9 @@
 from engine.dataset.base.dataset import TokenizedSample
-from engine.dataset.packing.packer import SequencePacker
 from engine.dataset.packing.dynamic import DynamicPacker
-from engine.dataset.packing.truncation import TruncationHandler
-from engine.dataset.packing.padding import PaddingHandler
 from engine.dataset.packing.metrics import PackingMetricsCalculator
+from engine.dataset.packing.packer import SequencePacker
+from engine.dataset.packing.padding import PaddingHandler
+from engine.dataset.packing.truncation import TruncationHandler
 
 
 def test_sequence_packer() -> None:
@@ -67,9 +67,7 @@ def test_padding_handler() -> None:
 
 
 def test_packing_metrics_calculator() -> None:
-    packed = [
-        TokenizedSample(input_ids=[1, 2, 3, 0, 0], labels=[1, 2, 3, -100, -100])
-    ]
+    packed = [TokenizedSample(input_ids=[1, 2, 3, 0, 0], labels=[1, 2, 3, -100, -100])]
     metrics = PackingMetricsCalculator.calculate_efficiency(
         packed, raw_lengths=[3], max_sequence_length=5, ignore_index=-100
     )
