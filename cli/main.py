@@ -1033,7 +1033,7 @@ def _setup_distributed_parsers(subparsers: Any) -> None:
     # monitor-training
     subparsers.add_parser(
         "monitor-training",
-        help="Streams live Loss, LR, VRAM %, GPU %, TFLOPS, power, and temps",
+        help="Streams live Loss, LR, VRAM %%, GPU %%, TFLOPS, power, and temps",
     )
 
 
