@@ -1,5 +1,9 @@
+import os
+
 import yaml
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 
 from engine.api.lifespan import lifespan
 from engine.api.logging.json_logger import setup_json_logging
@@ -50,3 +54,14 @@ app.add_middleware(RequestIdMiddleware)
 
 # Include main router paths
 app.include_router(main_router)
+
+# Mount web app static files if directory exists
+web_dir = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "apps", "web"
+)
+if os.path.exists(web_dir):
+    app.mount("/app", StaticFiles(directory=web_dir, html=True), name="app")
+
+    @app.get("/", include_in_schema=False)
+    def root_redirect():
+        return RedirectResponse(url="/app/")

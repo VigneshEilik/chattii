@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatii — AI Assistant Platform</title>
+  <style>
+    :root {
+      --bg-primary: #12151e;
+      --bg-secondary: #1a1e2e;
+      --bg-tertiary: #24293e;
+      --text-main: #f0f2f8;
+      --text-muted: #8b95b5;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --border: #2e354f;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #f1f5f9;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #4f46e5;
+      --accent-hover: #4338ca;
+      --border: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font); }
+    body { background-color: var(--bg-primary); color: var(--text-main); height: 100vh; display: flex; overflow: hidden; }
+
+    /* Sidebar */
+    .sidebar { width: 280px; background-color: var(--bg-secondary); border-right: 1px solid var(--border); display: flex; flex-direction: column; padding: 16px; gap: 12px; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: var(--accent); display: flex; justify-content: space-between; align-items: center; }
+    .new-chat-btn { background: var(--accent); color: white; border: none; padding: 10px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .new-chat-btn:hover { background: var(--accent-hover); }
+    .search-input { background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-main); padding: 8px 12px; border-radius: 6px; }
+
+    .history-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+    .history-item { padding: 10px 12px; border-radius: 6px; cursor: pointer; color: var(--text-muted); font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: 0.2s; }
+    .history-item:hover, .history-item.active { background: var(--bg-tertiary); color: var(--text-main); }
+
+    /* Main Content */
+    .main-content { flex: 1; display: flex; flex-direction: column; height: 100vh; }
+    .top-bar { padding: 14px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); }
+    .controls { display: flex; gap: 12px; align-items: center; }
+    select, button { background: var(--bg-tertiary); color: var(--text-main); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+
+    .chat-messages { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .message { display: flex; gap: 12px; max-width: 800px; width: 100%; margin: 0 auto; line-height: 1.6; }
+    .message.user { align-self: flex-end; flex-direction: row-reverse; }
+    .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+    .message.assistant .avatar { background: #10b981; }
+
+    .bubble { background: var(--bg-tertiary); padding: 14px 18px; border-radius: 12px; border: 1px solid var(--border); flex: 1; overflow-x: auto; }
+    pre { background: #0d1117; padding: 12px; border-radius: 6px; font-family: monospace; overflow-x: auto; margin-top: 8px; }
+
+    /* Input Bar */
+    .input-container { padding: 16px 24px; background: var(--bg-secondary); border-top: 1px solid var(--border); }
+    .input-box { max-width: 800px; margin: 0 auto; display: flex; gap: 10px; background: var(--bg-tertiary); padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); }
+    .chat-input { flex: 1; background: transparent; border: none; color: var(--text-main); outline: none; font-size: 1rem; resize: none; }
+    .send-btn { background: var(--accent); color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <span>Chatii AI</span>
+      <button id="themeToggle" style="padding: 2px 6px;">🌙</button>
+    </div>
+    <button class="new-chat-btn" id="newChatBtn">+ New Chat</button>
+    <input type="text" class="search-input" id="searchHistory" placeholder="Search chats..." />
+    <div class="history-list" id="historyList">
+      <div class="history-item active">Welcome to Chatii</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="top-bar">
+      <h2 id="chatTitle">New Conversation</h2>
+      <div class="controls">
+        <label>Model:
+          <select id="modelSelect">
+            <option value="chatii-v1">Chatii-v1 (Default)</option>
+            <option value="chatii-base">Chatii-Base</option>
+          </select>
+        </label>
+        <label>Temp: <span id="tempVal">0.7</span>
+          <input type="range" id="tempSlider" min="0" max="1" step="0.1" value="0.7" style="vertical-align: middle; width: 60px;" />
+        </label>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message assistant">
+        <div class="avatar">C</div>
+        <div class="bubble">Hello! I am Chatii, your production AI assistant. How can I help you today?</div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <div class="input-box">
+        <textarea class="chat-input" id="chatInput" rows="1" placeholder="Ask anything..."></textarea>
+        <button class="send-btn" id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app/app.js"></script>
+</body>
+</html>
