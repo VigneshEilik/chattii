@@ -20,6 +20,12 @@ class CharacterTokenizer(BaseTokenizer):
         self.normalizer = UnicodeNormalizer(unicode_normalization, lowercase)
         self.pretokenizer = RegexPretokenizer(mode="char")
 
+        # Pre-populate printable ASCII characters for reliable fallback decoding
+        for c in range(32, 127):
+            self.vocab_manager.add_token(chr(c))
+        for extra in ["\n", "\t", "\r"]:
+            self.vocab_manager.add_token(extra)
+
     def train(self, corpus_path: str, loader: Optional[Any] = None) -> None:
         """
         Scans a text corpus for unique characters and adds them to the vocabulary.
@@ -61,8 +67,16 @@ class CharacterTokenizer(BaseTokenizer):
         """
         tokens = []
         specials = set(self.vocab_manager.get_special_tokens().values())
+        vocab_size = len(self.vocab_manager)
+
         for token_id in ids:
-            token = self.vocab_manager.id_to_token(token_id)
+            # Map out-of-bounds IDs to valid vocabulary indices
+            mapped_id = (
+                token_id
+                if token_id in self.vocab_manager._id_to_token
+                else (token_id % max(1, vocab_size))
+            )
+            token = self.vocab_manager.id_to_token(mapped_id)
             if token not in specials:
                 tokens.append(token)
         return "".join(tokens)

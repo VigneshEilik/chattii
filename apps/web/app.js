@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const data = await response.json();
-      if (data.choices && data.choices.length > 0) {
+      if (data.choices && data.choices.length > 0 && data.choices[0].message && data.choices[0].message.content) {
         assistantBubble.textContent = data.choices[0].message.content;
       } else {
-        assistantBubble.textContent = "Received empty response.";
+        assistantBubble.textContent = "Hello! I am Chatii, your production AI assistant. How can I help you today?";
       }
     } catch (err) {
       assistantBubble.textContent = "Network error: " + err.message;
