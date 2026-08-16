@@ -27,3 +27,9 @@ def check_startup(request: Request, response: Response):
         response.status_code = status.HTTP_503_SERVICE_UNAVAILABLE
         return {"status": "starting"}
     return {"status": "started"}
+
+
+@router.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    """Favicon endpoint preventing browser 404/401 console logs."""
+    return Response(status_code=status.HTTP_204_NO_CONTENT)

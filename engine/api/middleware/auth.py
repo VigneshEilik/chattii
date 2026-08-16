@@ -23,6 +23,7 @@ class AuthMiddleware(BaseHTTPMiddleware):
             "/v1/auth/register",
             "/v1/auth/login",
             "/v1/auth/refresh",
+            "/favicon.ico",
             "/",
         ]
         if (
