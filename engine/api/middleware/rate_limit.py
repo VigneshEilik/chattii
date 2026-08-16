@@ -7,8 +7,13 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next):
         path = request.url.path
-        # Skip health/metrics/docs from rate limiting
-        if path.startswith("/health") or path == "/metrics" or path.startswith("/docs"):
+        # Skip health/metrics/docs/admin from rate limiting
+        if (
+            path.startswith("/health")
+            or path == "/metrics"
+            or path.startswith("/docs")
+            or path.startswith("/v1/admin")
+        ):
             return await call_next(request)
 
         limiter = request.app.state.limiter

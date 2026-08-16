@@ -151,7 +151,7 @@ pytest tests/
 pytest tests/ --cov=engine --cov-report=html
 ```
 
-**Current status**: **268 tests passing** (unit + integration + E2E platform tests).
+**Current status**: **289 tests passing** (unit + integration + production hardening tests).
 
 ---
 
@@ -169,6 +169,7 @@ pytest tests/ --cov=engine --cov-report=html
 | **M7** | Inference Engine & Text Generation (KV Cache, Sampling, Streaming) | ✅ Complete |
 | **M8** | API Serving & Production Deployment (OpenAI API, Docker, K8s, SDKs) | ✅ Complete |
 | **M9** | AI Assistant Platform & User Experience (Web UI, Auth, RAG, Tools, Multimodal, Safety, Eval) | ✅ Complete |
+| **M9-H** | Production Validation & Hardening (E2E Conversation, RAG Quality, Security, Load & TTFT Benchmarks) | ✅ Complete |
 
 ---
 

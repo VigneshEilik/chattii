@@ -50,9 +50,13 @@ class AuthMiddleware(BaseHTTPMiddleware):
         is_session_valid = False
         if auth_header and auth_header.startswith("Bearer "):
             token = auth_header.split(" ")[1]
+            from engine.platform.apikeys.key import get_api_key_manager
             from engine.platform.auth.session import get_session_manager
 
-            if get_session_manager().get_session_by_token(token) is not None:
+            if (
+                get_session_manager().get_session_by_token(token) is not None
+                or get_api_key_manager().verify_key(token) is not None
+            ):
                 is_session_valid = True
 
         if not is_key_valid and not is_jwt_valid and not is_session_valid:
