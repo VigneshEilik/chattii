@@ -33,3 +33,9 @@ def check_startup(request: Request, response: Response):
 def favicon():
     """Favicon endpoint preventing browser 404/401 console logs."""
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@router.get("/.well-known/{rest_of_path:path}", include_in_schema=False)
+def well_known(rest_of_path: str):
+    """Handles browser devtools and well-known requests cleanly."""
+    return Response(status_code=status.HTTP_204_NO_CONTENT)

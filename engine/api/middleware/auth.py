@@ -31,6 +31,7 @@ class AuthMiddleware(BaseHTTPMiddleware):
             or path.startswith("/docs")
             or path.startswith("/redoc")
             or path.startswith("/app")
+            or path.startswith("/.well-known")
         ):
             return await call_next(request)
 
